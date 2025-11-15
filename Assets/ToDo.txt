@@ -1,0 +1,16 @@
+- fix: LLM tends to call functions instead of picking None 
+  eg: when asked to make object bigger, scales by factor of 0 by default and ask for more info
+- automatic argument schema construction
+- allow multiple function calling for same prompt maybe ? 
+- better way of converting from JSON to arguments (use Newtonsoft.Json?)
+- better way of handeling function descriptions (some way to attach to each function?)
+- voice recognition
+- make functions happen over time for example, rotation not instant
+- RAG (test)
+- somehow sent it information on current state so LLM can understand better
+- figure out what kind of interactions can be added
+- figure out how to make LLM automatically call functions (not requiring to be explicitly told to call them)
+- highlight specific sections of liver (different static model)
+- load patient information
+- VR
+- function reflection / 2 funciton calling - show the AI the response of the function and then have it output something based on that.

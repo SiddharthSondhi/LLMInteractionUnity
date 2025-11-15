@@ -1,0 +1,100 @@
+{
+  "patients": [
+    {
+      "name": "John Doe",
+      "age": 45,
+      "gender": "Male",
+      "diagnosis": "Liver fibrosis (Stage II)",
+      "procedure": "Ultrasound-guided biopsy",
+      "liverMass": 1.8
+    },
+    {
+      "name": "Jane Smith",
+      "age": 52,
+      "gender": "Female",
+      "diagnosis": "Hepatic cyst",
+      "procedure": "Laparoscopic cyst removal",
+      "liverMass": 1.3
+    },
+    {
+      "name": "Carlos Hernandez",
+      "age": 39,
+      "gender": "Male",
+      "diagnosis": "Non-alcoholic fatty liver disease",
+      "procedure": "Dietary counseling and monitoring",
+      "liverMass": 1.6
+    },
+    {
+      "name": "Emily Zhang",
+      "age": 61,
+      "gender": "Female",
+      "diagnosis": "Hepatocellular carcinoma (early stage)",
+      "procedure": "Radiofrequency ablation",
+      "liverMass": 1.9
+    },
+    {
+      "name": "Michael Patel",
+      "age": 47,
+      "gender": "Male",
+      "diagnosis": "Alcoholic liver cirrhosis",
+      "procedure": "Paracentesis and medication management",
+      "liverMass": 1.5
+    },
+    {
+      "name": "Olivia Johnson",
+      "age": 34,
+      "gender": "Female",
+      "diagnosis": "Acute hepatitis B infection",
+      "procedure": "Antiviral therapy and observation",
+      "liverMass": 1.7
+    },
+    {
+      "name": "David Kim",
+      "age": 57,
+      "gender": "Male",
+      "diagnosis": "Metastatic liver lesion",
+      "procedure": "CT-guided resection",
+      "liverMass": 2.2
+    },
+    {
+      "name": "Sophia Rossi",
+      "age": 29,
+      "gender": "Female",
+      "diagnosis": "Benign hepatic adenoma",
+      "procedure": "Minimally invasive resection",
+      "liverMass": 1.4
+    },
+    {
+      "name": "Liam Nguyen",
+      "age": 63,
+      "gender": "Male",
+      "diagnosis": "Primary biliary cholangitis",
+      "procedure": "Liver enzyme therapy and follow-up",
+      "liverMass": 1.6
+    },
+    {
+      "name": "Isabella Garcia",
+      "age": 42,
+      "gender": "Female",
+      "diagnosis": "Focal nodular hyperplasia",
+      "procedure": "MRI monitoring every 6 months",
+      "liverMass": 1.2
+    },
+    {
+      "name": "Robert Lee",
+      "age": 70,
+      "gender": "Male",
+      "diagnosis": "Chronic hepatitis C",
+      "procedure": "Antiviral therapy with sofosbuvir",
+      "liverMass": 1.9
+    },
+    {
+      "name": "Ava Thompson",
+      "age": 38,
+      "gender": "Female",
+      "diagnosis": "Liver abscess (bacterial)",
+      "procedure": "Percutaneous drainage",
+      "liverMass": 1.5
+    }
+  ]
+}
