@@ -2,20 +2,22 @@ using LLMUnitySamples;
 using System.Collections.Generic;
 using System.Text;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class VoiceInput : MonoBehaviour{
 
     [SerializeField] private TMP_InputField userText;
     [SerializeField] private TMP_Text aiText;
-    [SerializeField] private FunctionCalling LLMFunctionCaller;
+    [SerializeField] private Image MicIndicator;
 
-    private StringBuilder partialText = new StringBuilder();
     private bool isListening = false;
     private DictationRecognizer dictation;
+    private string hypothesisText = "";
+    private string textBeforeListening = "";
+
 
     private InputDevice leftController;
 
@@ -23,12 +25,17 @@ public class VoiceInput : MonoBehaviour{
     void Start(){
         // setup dictation
         dictation = new DictationRecognizer(ConfidenceLevel.Medium);
-        //dictation.DictationHypothesis += OnHypothesis;
+        dictation.DictationHypothesis += OnHypothesis;
         dictation.DictationResult += OnResult;
         dictation.DictationComplete += OnComplete;
         dictation.DictationError += OnError;
 
-
+        /*
+        foreach (var device in Microphone.devices)
+            Debug.Log("Mic device: " + device);
+        */
+        
+        MicIndicator.enabled = false;
     }
 
     void Update() {
@@ -52,34 +59,38 @@ public class VoiceInput : MonoBehaviour{
     }
 
     private void StartListening() {
-        Debug.Log("START LISTENING (X pressed)");
-        partialText.Clear();
+        //Debug.Log("START LISTENING (X pressed)");
+
+        MicIndicator.enabled = true;
         isListening = true;
+        textBeforeListening = userText.text;
         dictation.Start();
 
-        Debug.Log("DictationRecognizer.Status = " + dictation.Status);
-
+        //Debug.Log("DictationRecognizer.Status = " + dictation.Status);
     }
 
     private void StopListening() {
-        Debug.Log("STOP LISTENING (X released)");
+        //Debug.Log("STOP LISTENING (X released)");
+        MicIndicator.enabled = false;
         isListening = false;
         dictation.Stop();
+        hypothesisText = "";
     }
 
 
     private void OnHypothesis(string text) {
-        userText.text = text;
+        hypothesisText = text;
+        userText.text = textBeforeListening + hypothesisText;
     }
 
     private void OnResult(string text, ConfidenceLevel confidence) {
-        partialText.Append(text).Append(" ");
-        userText.text = partialText.ToString();
+        textBeforeListening += text + " ";
+        userText.text = textBeforeListening;
+        hypothesisText = "";
     }
 
     private void OnComplete(DictationCompletionCause cause) {
         isListening = false;
-        //LLMFunctionCaller.SendMessage("OnInputFieldSubmit", userText.text);
     }
 
     private void OnError (string error, int hresult) {
@@ -89,7 +100,7 @@ public class VoiceInput : MonoBehaviour{
 
     private void OnDestroy() {
         if (dictation != null) {
-            //dictation.DictationHypothesis -= OnHypothesis;
+            dictation.DictationHypothesis -= OnHypothesis;
             dictation.DictationResult -= OnResult;
             dictation.DictationComplete -= OnComplete;
             dictation.DictationError -= OnError;
