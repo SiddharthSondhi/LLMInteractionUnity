@@ -12,6 +12,7 @@ public class VoiceInput : MonoBehaviour{
     [SerializeField] private TMP_InputField userText;
     [SerializeField] private TMP_Text aiText;
     [SerializeField] private Image MicIndicator;
+    [SerializeField] private SofaFunctionCalling LLMFunctionCaller;
 
     private bool isListening = false;
     private DictationRecognizer dictation;
@@ -56,6 +57,16 @@ public class VoiceInput : MonoBehaviour{
 
         if (!xPressed && isListening)
             StopListening();
+    }
+
+    public void OnSendButton() {
+        string message = userText.text.Trim();
+
+        if (string.IsNullOrEmpty(message))
+            return;
+
+        LLMFunctionCaller.SendMessage("OnInputFieldSubmit", message);
+        userText.text = "";
     }
 
     private void StartListening() {

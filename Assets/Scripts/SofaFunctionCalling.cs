@@ -49,8 +49,6 @@ public class SofaFunctionCalling : MonoBehaviour {
     [SerializeField] private SofaContext sofaContext;
 
     void Start() {
-
-
         // find the DAG node named "Liver"
         foreach (var node in sofaContext.GetComponentsInChildren<SofaDAGNode>()) {
             if (node.DisplayName == "Liver") {
