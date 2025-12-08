@@ -5,12 +5,11 @@ using UnityEditor.Rendering.Universal;
 
 [System.Serializable]
 public class PatientInfo {
-    public string name;
-    public int age;
-    public string gender;
-    public string diagnosis;
-    public string procedure;
-    public float liverMass; 
+    public int id;
+    public string sex;
+    public int yearOfBirth;
+    public int liverDensity;
+    public string pathologies;
 }
 
 [System.Serializable]
@@ -18,8 +17,10 @@ public class PatientDatabase {
     public List<PatientInfo> patients;
 }
 
+
 public static class PatientManager{
     private static PatientDatabase patients;
+
 
     static PatientManager(){
         TextAsset jsonFile = Resources.Load<TextAsset>("patients");
@@ -31,9 +32,9 @@ public static class PatientManager{
         patients = JsonUtility.FromJson<PatientDatabase>(jsonFile.text);
     }
 
-    public static PatientInfo GetPatient(string name) {
+    public static PatientInfo GetPatient(int id) {
         foreach (var p in patients.patients) {
-            if (p.name.ToLower().Trim() == name.ToLower().Trim()) {
+            if (p.id == id) {
                 return p;
             }
         }

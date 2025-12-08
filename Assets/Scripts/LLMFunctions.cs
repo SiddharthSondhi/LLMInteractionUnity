@@ -23,8 +23,8 @@ public static class LLMFunctions {
           description - Resets the simulation to its original state.
 
         - LoadPatientInfo
-          description - Loads and displays patient information based on given name.
-          arguments - name : string
+          description - Loads and displays patient information based on given id. Additionally loads in a model of the patient's liver.
+          arguments - id : id
 
         - HighlightSegment
           description - Highlights one of the 9 liver segments.
@@ -64,16 +64,19 @@ public static class LLMFunctions {
         return "Reset the simulation";
     }
 
-    public static string LoadPatientInfo(string name) {
-        PatientInfo p = PatientManager.GetPatient(name);
+    public static string LoadPatientInfo(int id) {
+        PatientInfo p = PatientManager.GetPatient(id);
         
-        if (p == null) return "No patient found.";
-        return $"Found patient name {p.name}.\n" +
-               $"Age: {p.age}\n" +
-               $"Gender: {p.gender}\n" +
-               $"Diagnosis: {p.diagnosis}\n" +
-               $"Procedure: {p.procedure}\n" +
-               $"Liver Mass: {p.liverMass}";
+        if (p == null) return $"No patient found with given id : {id}.";
+        string response = $"Found patient id {p.id}.\n" +
+                          $"Sex: {p.sex}\n" +
+                          $"Year of Birth: {p.yearOfBirth}\n" +
+                          $"Liver Density: {p.liverDensity}\n" +
+                          $"Pathologies: {p.pathologies}";
+
+        PatientModelManager.Instance.ShowPatient(id);
+
+        return response;
     }
 
     public static string HighlightSegment(int segment) {

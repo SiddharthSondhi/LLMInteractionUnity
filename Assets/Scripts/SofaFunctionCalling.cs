@@ -24,7 +24,7 @@ public class Args {
     public float gravZ;
 
     // load patient
-    public string name;
+    public int id;
 
     // highlight segment
     public int segment;
@@ -117,7 +117,7 @@ public class SofaFunctionCalling : MonoBehaviour {
             case "SetGravity":
                 return LLMFunctions.SetGravity(result.args.gravX, result.args.gravY, result.args.gravZ);
             case "LoadPatientInfo":
-                return LLMFunctions.LoadPatientInfo(result.args.name);
+                return LLMFunctions.LoadPatientInfo(result.args.id);
             case "HighlightSegment":
                 return LLMFunctions.HighlightSegment(result.args.segment);
             // for no arg functions
@@ -191,9 +191,9 @@ public class SofaFunctionCalling : MonoBehaviour {
                 {
                 ""type"": ""object"",
                 ""properties"": {
-                    ""name"": { ""type"": ""string""}
+                    ""id"": { ""type"": ""integer""}
                 },
-                ""required"": [""name""],
+                ""required"": [""id""],
                 ""additionalProperties"" : false
                 }"
             },
