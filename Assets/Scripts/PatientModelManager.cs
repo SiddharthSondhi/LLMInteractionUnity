@@ -29,5 +29,7 @@ public class PatientModelManager : MonoBehaviour {
 
         HideAllPatients();
         patientModels[index].SetActive(true);
+        patientModels[index].transform.position = new Vector3(2.565f, 1.215f, -1.945f);
+        patientModels[index].transform.rotation = Quaternion.Euler(-90, 180, 0);
     }
 }

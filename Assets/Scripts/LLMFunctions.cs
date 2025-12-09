@@ -65,15 +65,7 @@ public static class LLMFunctions {
     }
 
     public static string LoadPatientInfo(int id) {
-        PatientInfo p = PatientManager.GetPatient(id);
-        
-        if (p == null) return $"No patient found with given id : {id}.";
-        string response = $"Found patient id {p.id}.\n" +
-                          $"Sex: {p.sex}\n" +
-                          $"Year of Birth: {p.yearOfBirth}\n" +
-                          $"Liver Density: {p.liverDensity}\n" +
-                          $"Pathologies: {p.pathologies}";
-
+        string response = PatientInfoUI.Instance.DisplayPatient(id);
         PatientModelManager.Instance.ShowPatient(id);
 
         return response;
