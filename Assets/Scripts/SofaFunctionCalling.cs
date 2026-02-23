@@ -145,10 +145,11 @@ public class SofaFunctionCalling : MonoBehaviour {
                 "Pick the best function out of these choices based on the user input. " +
                 "PICK 'None' IF NO OPTION FITS OR IF YOU DON'T HAVE ENOUGH INFORMATION FOR THE ARGUMENTS OF THE FUNCTION. \n" +
                 "In addition to that, write a natural language reply for the user.\n" +
-               $"Patient Information: {PatientManager.GetAllPatientInfoString()}" +
+               $"Patient Information: {PatientManager.GetAllPatientInfoString()}\n\n" +
                $"User input: {message}\n\n" +
                $"Function Choices: {choices}\n\n" +
-               $"Funciton Descriptions: {LLMFunctions.functionDescriptions}";
+               $"Funciton Descriptions: {LLMFunctions.functionDescriptions}\n\n" +
+               "Please only answer questions or talk about things that are relevant to the above topic.\n";
                
     }
 
