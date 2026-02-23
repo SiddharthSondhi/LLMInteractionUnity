@@ -17,11 +17,7 @@ public class PatientInfoUI : MonoBehaviour {
             text = $"No patient found with given id : {id}.";
         }
         else {
-            text = $"Found patient id {p.id}.\n" +
-                    $"Sex: {p.sex}\n" +
-                    $"Year of Birth: {p.yearOfBirth}\n" +
-                    $"Liver Density: {p.liverDensity}\n" +
-                    $"Pathologies: {p.pathologies}";
+            text = p.getPatientInfo();
         }
 
         infoText.text = text ;

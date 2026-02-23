@@ -1,5 +1,6 @@
 using LLMUnity;
 using SofaUnity;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
@@ -28,6 +29,9 @@ public class Args {
 
     // highlight segment
     public int segment;
+
+    //highlight liver part;
+    public string partName;
 }
 
 
@@ -74,10 +78,13 @@ public class SofaFunctionCalling : MonoBehaviour {
             //disable user input
             userText.interactable = false;
 
-            //wait for response from llmCharacter
-            string jsonResponse = await llmCharacter.Chat(ConstructPrompt(message));
+            string prompt = ConstructPrompt(message);
+            Debug.Log("Sent prompt: \n" + prompt);   
 
-            Debug.Log(jsonResponse);
+            //wait for response from llmCharacter
+            string jsonResponse = await llmCharacter.Chat(prompt);
+
+            Debug.Log("JSON Response: \n" + jsonResponse);
 
             // convert response form JSON to variables (LLMResult Class)
             LLMResult result = null;
@@ -120,6 +127,8 @@ public class SofaFunctionCalling : MonoBehaviour {
                 return LLMFunctions.LoadPatientInfo(result.args.id);
             case "HighlightSegment":
                 return LLMFunctions.HighlightSegment(result.args.segment);
+            case "HighlightLiverPart":
+                return LLMFunctions.HighlightLiverPart(result.args.partName);
             // for no arg functions
             default:
                 var f = getLLMFunction(result.choice);
@@ -136,9 +145,11 @@ public class SofaFunctionCalling : MonoBehaviour {
                 "Pick the best function out of these choices based on the user input. " +
                 "PICK 'None' IF NO OPTION FITS OR IF YOU DON'T HAVE ENOUGH INFORMATION FOR THE ARGUMENTS OF THE FUNCTION. \n" +
                 "In addition to that, write a natural language reply for the user.\n" +
+               $"Patient Information: {PatientManager.GetAllPatientInfoString()}" +
                $"User input: {message}\n\n" +
                $"Function Choices: {choices}\n\n" +
                $"Funciton Descriptions: {LLMFunctions.functionDescriptions}";
+               
     }
 
     private string CreateJSONSchema() {
@@ -206,6 +217,18 @@ public class SofaFunctionCalling : MonoBehaviour {
                     ""segment"": { ""type"": ""integer"", ""minimum"": 1, ""maximum"": 9}
                 },
                 ""required"": [""segment""],
+                ""additionalProperties"" : false
+                }"
+            },
+            {
+                "HighlightLiverPart",
+                @"
+                {
+                ""type"": ""object"",
+                ""properties"": {
+                    ""partName"": { ""type"": ""string"", ""enum"" : [""CommonHepaticPortal"", ""GallBladder"", ""HepaticPortalVein"", ""InferiorVenaCava"", ""LeftLobe"", ""RightLobe"", ""Ligaments""] }
+                },
+                ""required"": [""partName""],
                 ""additionalProperties"" : false
                 }"
             }
@@ -284,5 +307,6 @@ public class SofaFunctionCalling : MonoBehaviour {
             functionNames.Add(function.Name);
         return functionNames.ToArray();
     }
+
 }
 

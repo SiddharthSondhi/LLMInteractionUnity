@@ -1,6 +1,5 @@
 using System.Linq;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class LiverSegmentHighlighter : MonoBehaviour {
     public static LiverSegmentHighlighter Instance;
@@ -22,7 +21,7 @@ public class LiverSegmentHighlighter : MonoBehaviour {
         for (int i = 0; i < segments.Length; i++)
             segments[i].sharedMaterial = normalMat;
 
-        Debug.Log($"Num Segments Found: {segments.Length}");
+        //Debug.Log($"Num Segments Found: {segments.Length}");
     }
 
     public void HighlightSegment(int index) {

@@ -1,5 +1,7 @@
 using UnityEngine;
 using SofaUnity;
+using NUnit.Framework.Constraints;
+using NUnit.Framework;
 
 
 public static class LLMFunctions {
@@ -29,6 +31,12 @@ public static class LLMFunctions {
         - HighlightSegment
           description - Highlights one of the 9 liver segments.
           arguments - index : integer in range(1 - 9)
+
+        - HighlightLiverPart
+          description - Highlights one of the following liver parts: Common Hepatic Portal, Gall Bladder, Hepatic Portal Vein, Inferior 
+                        Vena Cava, Left Lobe, Right Lobe, and Ligaments.
+        - arguments - partName : string with options 'CommonHepaticPortal', 'GallBladder', 'HepaticPortalVein', 'InferiorVenaCava', 
+                      'LeftLobe', 'RightLobe', 'Ligaments 
         ";
 
     public static string TranslateLiver(float x, float y, float z) {
@@ -75,5 +83,28 @@ public static class LLMFunctions {
         LiverSegmentHighlighter.Instance.HighlightSegment(segment - 1);
 
         return $"Highlighted segment {segment}.";
+    }
+
+    public static string HighlightLiverPart(string partName) {
+        int index = 0;
+
+        switch (partName) {
+            case "CommonHepaticPortal": index = 0; break;
+            case "GallBladder":         index = 1; break;
+            case "HepaticPortalVein":   index = 2; break;
+            case "InferiorVenaCava":    index = 3; break;
+            case "LeftLobe":            index = 4; break;
+            case "RightLobe":           index = 5; break;
+            case "Ligaments":           index = 6; break;
+            default:                    index = -1; break;
+        }
+        
+        if (index >= 0) {
+            LiverAnatomyHighlighter.Instance.HighlightPart(index);
+            return $"Highlighted {partName}.";
+        }
+
+        LiverAnatomyHighlighter.Instance.ClearHighlight();
+        return $"No part with name {partName} found!";
     }
 }

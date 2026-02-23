@@ -54,12 +54,19 @@ public class SceneController : MonoBehaviour {
                 liverNode.Scale = Vector3.one;
             }
 
-            for (int i = 0; i < 9; i++) {
+            // highlighting segments
+            //for (int i = 0; i < 9; i++) {
+            //    if (Input.GetKeyDown(KeyCode.Alpha0 + i)) {
+            //        LiverSegmentHighlighter.Instance.HighlightSegment(i);
+            //    }
+            //}
+
+            // highlight anatomy 
+            for (int i = 0; i < 7; i++) {
                 if (Input.GetKeyDown(KeyCode.Alpha0 + i)) {
-                    LiverSegmentHighlighter.Instance.HighlightSegment(i);
+                    LiverAnatomyHighlighter.Instance.HighlightPart(i);
                 }
             }
-
 
         }
     }

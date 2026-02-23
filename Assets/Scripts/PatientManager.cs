@@ -10,6 +10,14 @@ public class PatientInfo {
     public int yearOfBirth;
     public int liverDensity;
     public string pathologies;
+
+    public string getPatientInfo() {
+        return  $"Patient id {id}.\n" +
+                $"Sex: {sex}\n" +
+                $"Year of Birth: {yearOfBirth}\n" +
+                $"Liver Density: {liverDensity}\n" +
+                $"Pathologies: {pathologies}";
+    }
 }
 
 [System.Serializable]
@@ -39,5 +47,14 @@ public static class PatientManager{
             }
         }
         return null;
+    }
+
+    public static string GetAllPatientInfoString() {
+        string info = "";
+        foreach (var p in patients.patients) {
+            info += p.getPatientInfo() + "\n\n";
+        }
+
+        return info;
     }
 }
