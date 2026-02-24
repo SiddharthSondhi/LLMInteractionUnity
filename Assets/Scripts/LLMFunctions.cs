@@ -29,8 +29,8 @@ public static class LLMFunctions {
           arguments - id : id
 
         - HighlightSegment
-          description - Highlights one of the 9 liver segments.
-          arguments - index : integer in range(1 - 9)
+          description - Highlights one of the 8 liver segments.
+          arguments - index : integer in range(1 - 8)
 
         - HighlightLiverPart
           description - Highlights one of the following liver parts: Common Hepatic Portal, Gall Bladder, Hepatic Portal Vein, Inferior 
@@ -80,7 +80,7 @@ public static class LLMFunctions {
     }
 
     public static string HighlightSegment(int segment) {
-        LiverSegmentHighlighter.Instance.HighlightSegment(segment - 1);
+        LiverSegmentHighlighter.Instance.HighlightSegment(segment);
 
         return $"Highlighted segment {segment}.";
     }

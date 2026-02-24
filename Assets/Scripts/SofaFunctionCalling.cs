@@ -139,8 +139,8 @@ public class SofaFunctionCalling : MonoBehaviour {
     // construct prompt to give to LLM based on list of functions as well as user input
     private string ConstructPrompt(string message) {
         string choices = string.Join(", ", GetFunctionNames());
-        return "You are an AI assistant. You are part of a simulation that contains a soft body simulation of a liver model." +
-                "The simulation/liver model can be controlled with several functions." +
+        return "You are an AI assistant. You are part of a simulation that contains simulations of a liver models." +
+                "The simulation/liver models can be controlled with several functions." +
                 "You also have access to patient information." +
                 "Pick the best function out of these choices based on the user input. " +
                 "PICK 'None' IF NO OPTION FITS OR IF YOU DON'T HAVE ENOUGH INFORMATION FOR THE ARGUMENTS OF THE FUNCTION. \n" +
@@ -149,8 +149,7 @@ public class SofaFunctionCalling : MonoBehaviour {
                $"User input: {message}\n\n" +
                $"Function Choices: {choices}\n\n" +
                $"Funciton Descriptions: {LLMFunctions.functionDescriptions}\n\n" +
-               "Please only answer questions or talk about things that are relevant to the above topic.\n";
-               
+               "Please only answer questions or talk about things that are relevant to the above topic.\n";          
     }
 
     private string CreateJSONSchema() {
@@ -215,7 +214,7 @@ public class SofaFunctionCalling : MonoBehaviour {
                 {
                 ""type"": ""object"",
                 ""properties"": {
-                    ""segment"": { ""type"": ""integer"", ""minimum"": 1, ""maximum"": 9}
+                    ""segment"": { ""type"": ""integer"", ""minimum"": 1, ""maximum"": 8}
                 },
                 ""required"": [""segment""],
                 ""additionalProperties"" : false
