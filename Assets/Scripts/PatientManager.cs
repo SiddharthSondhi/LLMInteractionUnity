@@ -49,6 +49,10 @@ public static class PatientManager{
         return null;
     }
 
+    public static List<PatientInfo> getPatients() {
+        return patients.patients;
+    }
+
     public static string GetAllPatientInfoString() {
         string info = "";
         foreach (var p in patients.patients) {
