@@ -13,10 +13,6 @@ public static class LLMFunctions {
           description - Translates the liver to the position x, y, z
           arguments - x : float, y : float, z : float
 
-        - RotateLiver        
-          description - Rotates the liver given number of degrees around the x, y, or z axis.
-          arguments - degrees : float, axis: string with options 'x'|'y'|'z'
-
         - SetGravity
           description - Sets the x, y, and z values for the force of gravity in the simulation 
           arguments - x : float, y : float, z : float
@@ -35,26 +31,13 @@ public static class LLMFunctions {
         - HighlightLiverPart
           description - Highlights one of the following liver parts: Common Hepatic Portal, Gall Bladder, Hepatic Portal Vein, Inferior 
                         Vena Cava, Left Lobe, Right Lobe, and Ligaments.
-        - arguments - partName : string with options 'CommonHepaticPortal', 'GallBladder', 'HepaticPortalVein', 'InferiorVenaCava', 
+          arguments - partName : string with options 'CommonHepaticPortal', 'GallBladder', 'HepaticPortalVein', 'InferiorVenaCava', 
                       'LeftLobe', 'RightLobe', 'Ligaments 
         ";
 
     public static string TranslateLiver(float x, float y, float z) {
         liverNode.Translation = new Vector3(x, y, z);
         return $"Translated Liver to {x}, {y}, {z}";
-    }
-
-    public static string RotateLiver(float degrees, string axis) {
-        Vector3 axisVec = Vector3.zero;
-        switch (axis) {
-            case "x": axisVec = new Vector3(degrees, 0, 0); break;
-            case "y": axisVec = new Vector3(0, degrees, 0); break;
-            case "z": axisVec = new Vector3(0, 0, degrees); break;
-        };
-
-        liverNode.Rotation += axisVec;
-
-        return $"Rotated liver {degrees} degrees around the {axis} axis";
     }
 
     public static string SetGravity(float gravX, float gravY, float gravZ) { 

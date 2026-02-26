@@ -15,10 +15,6 @@ public class Args {
     public float translateY;
     public float translateZ;
 
-    // rotate liver
-    public float degrees;
-    public string axis;
-
     // set gravity
     public float gravX;
     public float gravY;
@@ -95,6 +91,9 @@ public class SofaFunctionCalling : MonoBehaviour {
                 return;
             }
 
+            //TTS AI response
+            TTS.Instance.Speak(result.response);
+
 
             // Call function based on result or None
             if (result.choice != "None") {
@@ -119,8 +118,6 @@ public class SofaFunctionCalling : MonoBehaviour {
         switch (result.choice) {
             case "TranslateLiver":
                 return LLMFunctions.TranslateLiver(result.args.translateX, result.args.translateY, result.args.translateZ);
-            case "RotateLiver":
-                return LLMFunctions.RotateLiver(result.args.degrees, result.args.axis);
             case "SetGravity":
                 return LLMFunctions.SetGravity(result.args.gravX, result.args.gravY, result.args.gravZ);
             case "LoadPatientInfo":
@@ -149,7 +146,9 @@ public class SofaFunctionCalling : MonoBehaviour {
                $"User input: {message}\n\n" +
                $"Function Choices: {choices}\n\n" +
                $"Funciton Descriptions: {LLMFunctions.functionDescriptions}\n\n" +
-               "Please only answer questions or talk about things that are relevant to the above topic.\n";          
+               "Keep your responses breif and to the point."+
+               "Talk as if you were a real person who was an assistant having a conversation with the user."+
+               "Only answer questions or talk about things that are relevant to the above topic.\n";          
     }
 
     private string CreateJSONSchema() {
@@ -166,19 +165,6 @@ public class SofaFunctionCalling : MonoBehaviour {
                     ""translateZ"": { ""type"": ""number""}
                 },
                 ""required"": [""translateX"", ""translateY"", ""translateZ""],
-                ""additionalProperties"" : false
-                }"
-            },
-            {
-                "RotateLiver",
-                @"
-                {
-                ""type"": ""object"",
-                ""properties"": {
-                    ""degrees"": { ""type"": ""number"" },
-                    ""axis"": { ""type"": ""string"", ""enum"" : [""x"", ""y"", ""z""] }
-                },
-                ""required"": [""degrees"", ""axis""],
                 ""additionalProperties"" : false
                 }"
             },
