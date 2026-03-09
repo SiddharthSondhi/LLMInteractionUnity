@@ -1,0 +1,870 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "sex": "F",
+      "yearOfBirth": 1944,
+      "liverDensity": 111,
+      "pathologies": "7 tumours in III, IV/V, VII, VIII",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 01",
+          "heightCm": 162,
+          "weightKg": 68,
+          "smokingStatus": "Former",
+          "alcoholUse": "Occasional",
+          "allergies": ["Penicillin (rash)"],
+          "currentMeds": ["Amlodipine", "Atorvastatin"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Multifocal hepatic malignancy (suspected metastatic disease)",
+          "differential": ["HCC (multifocal)", "Metastases", "Cholangiocarcinoma"],
+          "tumourBurden": "High, bilobar involvement"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Hypertension", "Hyperlipidemia"],
+          "pastSurgicalHistory": ["Cholecystectomy"],
+          "familyHistory": ["No liver cancer"],
+          "socialHistory": "Retired, lives with spouse"
+        },
+        "imaging": {
+          "ctSummary": "Multiple enhancing lesions; no definite extrahepatic spread",
+          "mriSummary": "Arterial enhancement with washout in several segments",
+          "radiologyImpression": "Highly suspicious for malignancy"
+        },
+        "treatmentPlan": {
+          "recommendation": "Biopsy + oncology referral",
+          "plannedProcedures": ["Image-guided biopsy"],
+          "notes": "Discuss goals of care"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-05",
+          "pending": ["Biopsy results", "Oncology plan"]
+        }
+      }
+    },
+
+    {
+      "id": 2,
+      "sex": "F",
+      "yearOfBirth": 1987,
+      "liverDensity": 84,
+      "pathologies": "1 tumour in V",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 02",
+          "heightCm": 168,
+          "weightKg": 74,
+          "smokingStatus": "Never",
+          "alcoholUse": "None",
+          "allergies": [],
+          "currentMeds": ["Oral contraceptive"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Solitary liver lesion (likely benign)",
+          "differential": ["FNH", "Hepatic adenoma", "Early HCC (low suspicion)"],
+          "tumourBurden": "Low, solitary lesion"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Iron deficiency"],
+          "pastSurgicalHistory": [],
+          "familyHistory": ["Breast cancer (aunt)"],
+          "socialHistory": "Office worker, active lifestyle"
+        },
+        "imaging": {
+          "ctSummary": "2 cm lesion in segment V",
+          "mriSummary": "Findings suggest FNH",
+          "radiologyImpression": "Likely benign; surveillance advised"
+        },
+        "treatmentPlan": {
+          "recommendation": "Observation with follow-up imaging",
+          "plannedProcedures": [],
+          "notes": "Consider hormonal review if adenoma suspected"
+        },
+        "followUp": {
+          "nextVisit": "2026-04-01",
+          "pending": ["Repeat MRI"]
+        }
+      }
+    },
+
+    {
+      "id": 3,
+      "sex": "M",
+      "yearOfBirth": 1956,
+      "liverDensity": 108,
+      "pathologies": "1 tumour in IV",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 03",
+          "heightCm": 175,
+          "weightKg": 82,
+          "smokingStatus": "Former",
+          "alcoholUse": "Moderate",
+          "allergies": ["Contrast (mild nausea)"],
+          "currentMeds": ["Metformin", "Lisinopril"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Suspicious solitary HCC",
+          "differential": ["HCC", "Regenerative nodule"],
+          "tumourBurden": "Single lesion"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Type 2 diabetes", "Hypertension"],
+          "pastSurgicalHistory": ["Appendectomy"],
+          "familyHistory": ["Diabetes (father)"],
+          "socialHistory": "Engineer, sedentary"
+        },
+        "imaging": {
+          "ctSummary": "2.7 cm lesion with washout",
+          "mriSummary": "LI-RADS 4/5",
+          "radiologyImpression": "High suspicion for HCC"
+        },
+        "treatmentPlan": {
+          "recommendation": "Ablation vs resection evaluation",
+          "plannedProcedures": ["Surgical consult"],
+          "notes": "Optimize metabolic status"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-10",
+          "pending": ["Treatment decision"]
+        }
+      }
+    },
+
+    {
+      "id": 4,
+      "sex": "M",
+      "yearOfBirth": 1942,
+      "liverDensity": 107,
+      "pathologies": "7 tumours",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 04",
+          "heightCm": 170,
+          "weightKg": 76,
+          "smokingStatus": "Current",
+          "alcoholUse": "Occasional",
+          "allergies": [],
+          "currentMeds": ["Tiotropium", "Aspirin"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Multifocal liver malignancy",
+          "differential": ["Metastases", "Multifocal HCC"],
+          "tumourBurden": "Moderate–High"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["COPD", "CAD"],
+          "pastSurgicalHistory": ["Coronary stent"],
+          "familyHistory": ["Colon cancer (brother)"],
+          "socialHistory": "Retired"
+        },
+        "imaging": {
+          "ctSummary": "Diffuse multifocal lesions",
+          "mriSummary": "Heterogeneous enhancement",
+          "radiologyImpression": "Likely malignant"
+        },
+        "treatmentPlan": {
+          "recommendation": "Biopsy + systemic therapy pathway",
+          "plannedProcedures": ["Biopsy"],
+          "notes": "Smoking cessation advised"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-01",
+          "pending": ["Pathology results"]
+        }
+      }
+    },
+
+    {
+      "id": 5,
+      "sex": "M",
+      "yearOfBirth": 1957,
+      "liverDensity": 69,
+      "pathologies": "0 tumour in liver",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 05",
+          "heightCm": 178,
+          "weightKg": 96,
+          "smokingStatus": "Never",
+          "alcoholUse": "Moderate",
+          "allergies": [],
+          "currentMeds": ["Omeprazole"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Fatty liver disease",
+          "differential": ["NAFLD", "Alcohol-related steatosis"],
+          "tumourBurden": "None"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Obesity"],
+          "pastSurgicalHistory": [],
+          "familyHistory": ["Diabetes (mother)"],
+          "socialHistory": "Sedentary lifestyle"
+        },
+        "imaging": {
+          "ctSummary": "Diffuse steatosis",
+          "mriSummary": "No focal lesions",
+          "radiologyImpression": "Benign fatty infiltration"
+        },
+        "treatmentPlan": {
+          "recommendation": "Lifestyle modification",
+          "plannedProcedures": [],
+          "notes": "Weight reduction plan"
+        },
+        "followUp": {
+          "nextVisit": "2026-05-15",
+          "pending": ["Repeat imaging in 6 months"]
+        }
+      }
+    },
+
+    {
+      "id": 6,
+      "sex": "M",
+      "yearOfBirth": 1929,
+      "liverDensity": 105,
+      "pathologies": "20 tumours in liver",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 06",
+          "heightCm": 172,
+          "weightKg": 70,
+          "smokingStatus": "Former",
+          "alcoholUse": "None",
+          "allergies": ["Sulfa drugs (hives)"],
+          "currentMeds": ["Apixaban", "Metoprolol", "Furosemide"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Extensive multifocal hepatic malignancy",
+          "differential": ["Metastatic disease", "Multifocal HCC"],
+          "tumourBurden": "Very high, diffuse"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Atrial fibrillation", "Heart failure (stable)", "Chronic kidney disease (mild)"],
+          "pastSurgicalHistory": ["Pacemaker implantation"],
+          "familyHistory": ["No known hereditary cancer syndromes"],
+          "socialHistory": "Lives with family, limited mobility"
+        },
+        "imaging": {
+          "ctSummary": "Numerous lesions throughout both lobes; mild ascites",
+          "mriSummary": "Diffuse lesion burden; limited by motion",
+          "radiologyImpression": "Advanced disease; consider palliative pathway"
+        },
+        "treatmentPlan": {
+          "recommendation": "Biopsy only if changes management; supportive care discussion",
+          "plannedProcedures": ["Symptom-directed imaging as needed"],
+          "notes": "Review anticoagulation if interventions planned"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-08",
+          "pending": ["Oncology consult", "Goals-of-care discussion"]
+        }
+      }
+    },
+    {
+      "id": 7,
+      "sex": "M",
+      "yearOfBirth": 1946,
+      "liverDensity": 115,
+      "pathologies": "0 tumour in liver (1 adrenal)",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 07",
+          "heightCm": 180,
+          "weightKg": 83,
+          "smokingStatus": "Never",
+          "alcoholUse": "Occasional",
+          "allergies": [],
+          "currentMeds": ["Levothyroxine", "Vitamin D"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "No hepatic tumour; incidental adrenal lesion",
+          "differential": ["Adrenal adenoma", "Pheochromocytoma (low suspicion)", "Metastasis (low suspicion)"],
+          "tumourBurden": "None (liver)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Hypothyroidism"],
+          "pastSurgicalHistory": ["Hernia repair"],
+          "familyHistory": ["Hypertension (father)"],
+          "socialHistory": "Active, hikes on weekends"
+        },
+        "imaging": {
+          "ctSummary": "Liver without focal lesions; small adrenal nodule with benign features",
+          "mriSummary": "Chemical shift imaging consistent with lipid-rich adenoma",
+          "radiologyImpression": "Benign adrenal adenoma; clinical correlation"
+        },
+        "treatmentPlan": {
+          "recommendation": "Endocrine workup if symptomatic; otherwise observe",
+          "plannedProcedures": ["Baseline hormonal screening (if indicated)"],
+          "notes": "Reassure patient regarding liver"
+        },
+        "followUp": {
+          "nextVisit": "2026-04-20",
+          "pending": ["Optional adrenal labs", "Repeat CT in 12 months if needed"]
+        }
+      }
+    },
+    {
+      "id": 8,
+      "sex": "F",
+      "yearOfBirth": 1970,
+      "liverDensity": 159,
+      "pathologies": "3 tumours in I, II and IV",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 08",
+          "heightCm": 165,
+          "weightKg": 61,
+          "smokingStatus": "Never",
+          "alcoholUse": "None",
+          "allergies": ["Latex (itching)"],
+          "currentMeds": ["Propranolol (PRN migraine)", "Ibuprofen (PRN)"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Multiple liver lesions; characterization pending",
+          "differential": ["Hemangiomas", "FNH (multiple)", "Metastases (low suspicion)"],
+          "tumourBurden": "Low–Moderate (3 lesions)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Migraine"],
+          "pastSurgicalHistory": ["C-section (remote)"],
+          "familyHistory": ["No known liver disease"],
+          "socialHistory": "Works full-time, generally active"
+        },
+        "imaging": {
+          "ctSummary": "Three lesions in segments I, II, IV; one shows peripheral nodular enhancement",
+          "mriSummary": "Two lesions compatible with hemangioma; one indeterminate",
+          "radiologyImpression": "Likely benign; short-interval follow-up for indeterminate lesion"
+        },
+        "treatmentPlan": {
+          "recommendation": "Surveillance MRI; avoid unnecessary biopsy unless progression",
+          "plannedProcedures": ["MRI follow-up in 3–6 months"],
+          "notes": "Discuss benign lesion education"
+        },
+        "followUp": {
+          "nextVisit": "2026-06-01",
+          "pending": ["Repeat MRI", "Symptom review"]
+        }
+      }
+    },
+    {
+      "id": 9,
+      "sex": "M",
+      "yearOfBirth": 1949,
+      "liverDensity": 90,
+      "pathologies": "1 tumour in VIII",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 09",
+          "heightCm": 173,
+          "weightKg": 79,
+          "smokingStatus": "Former",
+          "alcoholUse": "Moderate",
+          "allergies": [],
+          "currentMeds": ["Losartan", "Tamsulosin"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Solitary liver lesion suspicious for malignancy",
+          "differential": ["HCC", "Metastasis", "Cholangiocarcinoma"],
+          "tumourBurden": "Low (single segment VIII lesion)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Hypertension", "BPH"],
+          "pastSurgicalHistory": [],
+          "familyHistory": ["Prostate cancer (father)"],
+          "socialHistory": "Retired, moderate activity"
+        },
+        "imaging": {
+          "ctSummary": "3.0 cm segment VIII lesion with arterial enhancement",
+          "mriSummary": "Washout present; capsule suspected",
+          "radiologyImpression": "High suspicion lesion; correlate clinically"
+        },
+        "treatmentPlan": {
+          "recommendation": "Assess for ablation vs resection; consider biopsy",
+          "plannedProcedures": ["Hepatology/surgery consult"],
+          "notes": "Review liver function and comorbidities"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-18",
+          "pending": ["Intervention plan", "Pre-op assessment"]
+        }
+      }
+    },
+    {
+      "id": 10,
+      "sex": "F",
+      "yearOfBirth": 1953,
+      "liverDensity": 104,
+      "pathologies": "8 tumours",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 10",
+          "heightCm": 160,
+          "weightKg": 72,
+          "smokingStatus": "Never",
+          "alcoholUse": "Occasional",
+          "allergies": ["Shellfish (GI upset)"],
+          "currentMeds": ["Sertraline", "Calcium supplement"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Multifocal hepatic lesions suspicious for metastatic disease",
+          "differential": ["Metastases", "Multifocal HCC", "Benign multifocal hemangiomas (less likely)"],
+          "tumourBurden": "High (multifocal)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Anxiety", "Osteopenia"],
+          "pastSurgicalHistory": ["Hysterectomy (remote)"],
+          "familyHistory": ["Breast cancer (mother)"],
+          "socialHistory": "Lives independently; light exercise"
+        },
+        "imaging": {
+          "ctSummary": "Multiple lesions scattered in both lobes; some necrotic centers",
+          "mriSummary": "Diffusion restriction in several lesions",
+          "radiologyImpression": "Suspicious multifocal malignancy; staging workup advised"
+        },
+        "treatmentPlan": {
+          "recommendation": "Biopsy + staging; oncology referral",
+          "plannedProcedures": ["Biopsy", "Chest imaging for staging"],
+          "notes": "Discuss systemic therapy options"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-06",
+          "pending": ["Biopsy results", "Staging completion"]
+        }
+      }
+    },
+    {
+      "id": 11,
+      "sex": "M",
+      "yearOfBirth": 1966,
+      "liverDensity": 108,
+      "pathologies": "0 tumour in liver",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 11",
+          "heightCm": 182,
+          "weightKg": 90,
+          "smokingStatus": "Never",
+          "alcoholUse": "Occasional",
+          "allergies": [],
+          "currentMeds": ["None"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "No hepatic tumour; mild hepatic steatosis",
+          "differential": ["NAFLD", "Transient liver inflammation"],
+          "tumourBurden": "None"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Prediabetes (noted)"],
+          "pastSurgicalHistory": [],
+          "familyHistory": ["Type 2 diabetes (mother)"],
+          "socialHistory": "Desk job; working on increasing activity"
+        },
+        "imaging": {
+          "ctSummary": "No focal lesions; mild steatosis",
+          "mriSummary": "No suspicious enhancement; benign findings",
+          "radiologyImpression": "No tumour; recommend lifestyle measures"
+        },
+        "treatmentPlan": {
+          "recommendation": "Lifestyle modification; repeat imaging only if clinically indicated",
+          "plannedProcedures": [],
+          "notes": "Diet/exercise counseling"
+        },
+        "followUp": {
+          "nextVisit": "2026-07-01",
+          "pending": ["Optional repeat imaging in 12 months"]
+        }
+      }
+    },
+    {
+      "id": 12,
+      "sex": "F",
+      "yearOfBirth": 1973,
+      "liverDensity": 118,
+      "pathologies": "1 tumour in VI",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 12",
+          "heightCm": 167,
+          "weightKg": 66,
+          "smokingStatus": "Never",
+          "alcoholUse": "None",
+          "allergies": ["Iodine contrast (rash)"],
+          "currentMeds": ["Albuterol (PRN)", "Cetirizine"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Solitary segment VI lesion; indeterminate",
+          "differential": ["Adenoma", "FNH", "Small HCC (low suspicion)"],
+          "tumourBurden": "Low"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Asthma", "Seasonal allergies"],
+          "pastSurgicalHistory": ["Tonsillectomy"],
+          "familyHistory": ["No significant history"],
+          "socialHistory": "Active; no alcohol"
+        },
+        "imaging": {
+          "ctSummary": "1.8 cm lesion in segment VI; enhancement pattern atypical",
+          "mriSummary": "Indeterminate features; no clear washout",
+          "radiologyImpression": "Follow-up imaging vs targeted biopsy depending on risk"
+        },
+        "treatmentPlan": {
+          "recommendation": "Surveillance MRI; consider biopsy if growth",
+          "plannedProcedures": ["MRI in 3 months"],
+          "notes": "Avoid estrogen therapy if adenoma suspected"
+        },
+        "followUp": {
+          "nextVisit": "2026-05-05",
+          "pending": ["Repeat MRI"]
+        }
+      }
+    },
+    {
+      "id": 13,
+      "sex": "M",
+      "yearOfBirth": 1951,
+      "liverDensity": 111,
+      "pathologies": "20 tumours",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 13",
+          "heightCm": 176,
+          "weightKg": 77,
+          "smokingStatus": "Former",
+          "alcoholUse": "Moderate",
+          "allergies": [],
+          "currentMeds": ["Carvedilol", "Spironolactone"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Multifocal liver lesions with chronic liver disease features",
+          "differential": ["Multifocal HCC", "Metastases"],
+          "tumourBurden": "Very high"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Cirrhosis (suspected)", "Portal hypertension (suspected)"],
+          "pastSurgicalHistory": ["EGD for variceal screening (remote)"],
+          "familyHistory": ["Alcohol use disorder (father)"],
+          "socialHistory": "Reduced activity; lives with spouse"
+        },
+        "imaging": {
+          "ctSummary": "Nodular liver contour; multiple lesions; splenomegaly",
+          "mriSummary": "Several lesions with washout; background cirrhosis",
+          "radiologyImpression": "Findings compatible with multifocal HCC on cirrhotic background"
+        },
+        "treatmentPlan": {
+          "recommendation": "Oncology/hepatology co-management; consider locoregional therapy if feasible",
+          "plannedProcedures": ["MDT review", "Consider TACE evaluation"],
+          "notes": "Assess liver reserve before intervention"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-12",
+          "pending": ["Treatment eligibility assessment"]
+        }
+      }
+    },
+    {
+      "id": 14,
+      "sex": "F",
+      "yearOfBirth": 1970,
+      "liverDensity": 109,
+      "pathologies": "0 tumour in liver",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 14",
+          "heightCm": 164,
+          "weightKg": 58,
+          "smokingStatus": "Never",
+          "alcoholUse": "None",
+          "allergies": ["NSAIDs (stomach upset)"],
+          "currentMeds": ["Pantoprazole"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "No tumour; nonspecific abdominal symptoms (imaging negative)",
+          "differential": ["Functional abdominal pain", "Mild steatosis (possible)"],
+          "tumourBurden": "None"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["GERD"],
+          "pastSurgicalHistory": [],
+          "familyHistory": ["No significant history"],
+          "socialHistory": "Active; balanced diet"
+        },
+        "imaging": {
+          "ctSummary": "No focal liver lesions; normal biliary tree",
+          "mriSummary": "Normal liver parenchyma; incidental benign cyst",
+          "radiologyImpression": "No tumour identified"
+        },
+        "treatmentPlan": {
+          "recommendation": "Reassurance; manage symptoms",
+          "plannedProcedures": [],
+          "notes": "Follow-up if symptoms persist"
+        },
+        "followUp": {
+          "nextVisit": "2026-06-20",
+          "pending": ["Symptom check-in"]
+        }
+      }
+    },
+    {
+      "id": 15,
+      "sex": "F",
+      "yearOfBirth": 1946,
+      "liverDensity": 104,
+      "pathologies": "2 tumours in III and VIII",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 15",
+          "heightCm": 158,
+          "weightKg": 64,
+          "smokingStatus": "Former",
+          "alcoholUse": "Occasional",
+          "allergies": [],
+          "currentMeds": ["Hydrochlorothiazide", "Calcium supplement"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Two hepatic lesions; malignancy workup ongoing",
+          "differential": ["Metastases", "Multifocal HCC (low–moderate suspicion)", "Hemangiomas"],
+          "tumourBurden": "Moderate (2 lesions)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Hypertension", "Osteoarthritis"],
+          "pastSurgicalHistory": ["Knee arthroscopy"],
+          "familyHistory": ["Colon polyps (sibling)"],
+          "socialHistory": "Retired; light activity"
+        },
+        "imaging": {
+          "ctSummary": "Lesions in segments III and VIII with mixed enhancement",
+          "mriSummary": "One lesion shows washout; the other indeterminate",
+          "radiologyImpression": "Recommend targeted biopsy of suspicious lesion"
+        },
+        "treatmentPlan": {
+          "recommendation": "Biopsy + MDT review",
+          "plannedProcedures": ["Biopsy (segment VIII if accessible)"],
+          "notes": "Assess for locoregional options based on pathology"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-22",
+          "pending": ["Pathology results", "MDT plan"]
+        }
+      }
+    },
+    {
+      "id": 16,
+      "sex": "M",
+      "yearOfBirth": 1950,
+      "liverDensity": 40,
+      "pathologies": "1 tumour in V",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 16",
+          "heightCm": 174,
+          "weightKg": 88,
+          "smokingStatus": "Current",
+          "alcoholUse": "Moderate",
+          "allergies": ["Morphine (nausea)"],
+          "currentMeds": ["Aspirin", "Rosuvastatin"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Hypodense liver with solitary lesion; background steatosis suspected",
+          "differential": ["HCC", "Adenoma", "Metastasis (moderate suspicion)"],
+          "tumourBurden": "Low (single lesion)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Hyperlipidemia", "Chronic bronchitis (history)"],
+          "pastSurgicalHistory": ["None"],
+          "familyHistory": ["Lung cancer (uncle)"],
+          "socialHistory": "Smokes; sedentary"
+        },
+        "imaging": {
+          "ctSummary": "Low attenuation liver parenchyma; 2.4 cm lesion in segment V",
+          "mriSummary": "Indeterminate enhancement; fatty infiltration prominent",
+          "radiologyImpression": "Further characterization recommended"
+        },
+        "treatmentPlan": {
+          "recommendation": "Risk-factor modification + lesion workup",
+          "plannedProcedures": ["MRI follow-up or biopsy depending on risk"],
+          "notes": "Smoking cessation and metabolic optimization"
+        },
+        "followUp": {
+          "nextVisit": "2026-04-02",
+          "pending": ["Decision: biopsy vs surveillance"]
+        }
+      }
+    },
+    {
+      "id": 17,
+      "sex": "M",
+      "yearOfBirth": 1942,
+      "liverDensity": 99,
+      "pathologies": "2 tumours in II and VIII",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 17",
+          "heightCm": 169,
+          "weightKg": 73,
+          "smokingStatus": "Former",
+          "alcoholUse": "Occasional",
+          "allergies": ["Adhesive tape (skin irritation)"],
+          "currentMeds": ["Clopidogrel", "Amlodipine"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Two hepatic lesions suspicious for malignancy",
+          "differential": ["Metastases", "Multifocal HCC", "Hemangiomas (less likely)"],
+          "tumourBurden": "Moderate (2 lesions)"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Stroke (remote)", "Hypertension"],
+          "pastSurgicalHistory": ["Carotid endarterectomy"],
+          "familyHistory": ["Coronary disease (siblings)"],
+          "socialHistory": "Retired; independent"
+        },
+        "imaging": {
+          "ctSummary": "Lesions in segments II and VIII with suspicious enhancement",
+          "mriSummary": "One lesion with washout; one indeterminate",
+          "radiologyImpression": "Tissue diagnosis recommended"
+        },
+        "treatmentPlan": {
+          "recommendation": "Biopsy + staging; review antiplatelet management",
+          "plannedProcedures": ["Biopsy", "Staging imaging"],
+          "notes": "Coordinate holding clopidogrel per protocol"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-26",
+          "pending": ["Biopsy results", "MDT decision"]
+        }
+      }
+    },
+    {
+      "id": 18,
+      "sex": "F",
+      "yearOfBirth": 1958,
+      "liverDensity": 49,
+      "pathologies": "0 tumour in IV/V",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 18",
+          "heightCm": 166,
+          "weightKg": 86,
+          "smokingStatus": "Never",
+          "alcoholUse": "Occasional",
+          "allergies": [],
+          "currentMeds": ["Metformin", "Vitamin B12"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "No focal lesion in IV/V; fatty liver suspected",
+          "differential": ["NAFLD/NASH", "Medication-related steatosis"],
+          "tumourBurden": "None"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Type 2 diabetes", "Obesity"],
+          "pastSurgicalHistory": ["C-section (remote)"],
+          "familyHistory": ["Type 2 diabetes (multiple relatives)"],
+          "socialHistory": "Sedentary; diet modification in progress"
+        },
+        "imaging": {
+          "ctSummary": "Low density consistent with steatosis; no focal masses",
+          "mriSummary": "Fat fraction elevated; no suspicious enhancement",
+          "radiologyImpression": "Fatty liver without tumour"
+        },
+        "treatmentPlan": {
+          "recommendation": "Lifestyle and metabolic management",
+          "plannedProcedures": [],
+          "notes": "Weight loss and glycemic control emphasized"
+        },
+        "followUp": {
+          "nextVisit": "2026-06-30",
+          "pending": ["Repeat imaging if clinically indicated"]
+        }
+      }
+    },
+    {
+      "id": 19,
+      "sex": "F",
+      "yearOfBirth": 1970,
+      "liverDensity": 135,
+      "pathologies": "46 tumours in liver",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 19",
+          "heightCm": 163,
+          "weightKg": 62,
+          "smokingStatus": "Never",
+          "alcoholUse": "None",
+          "allergies": ["Codeine (dizziness)"],
+          "currentMeds": ["None"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "Extensive diffuse hepatic lesions",
+          "differential": ["Metastatic disease", "Diffuse hemangiomatosis (less likely)", "Multifocal HCC"],
+          "tumourBurden": "Extremely high"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Anemia (history)"],
+          "pastSurgicalHistory": [],
+          "familyHistory": ["Colorectal cancer (parent)"],
+          "socialHistory": "Works full-time; generally active"
+        },
+        "imaging": {
+          "ctSummary": "Numerous lesions throughout liver; variable enhancement",
+          "mriSummary": "Diffuse lesion burden; several diffusion-restricting foci",
+          "radiologyImpression": "Highly suspicious diffuse malignancy; urgent workup"
+        },
+        "treatmentPlan": {
+          "recommendation": "Expedited staging + oncology referral; biopsy planning",
+          "plannedProcedures": ["Biopsy", "Full staging imaging"],
+          "notes": "Discuss urgency and support resources"
+        },
+        "followUp": {
+          "nextVisit": "2026-03-04",
+          "pending": ["Pathology", "Staging results", "Treatment start plan"]
+        }
+      }
+    },
+    {
+      "id": 20,
+      "sex": "F",
+      "yearOfBirth": 1949,
+      "liverDensity": 59,
+      "pathologies": "0 tumour in liver",
+      "tabs": {
+        "general": {
+          "displayName": "Patient 20",
+          "heightCm": 161,
+          "weightKg": 67,
+          "smokingStatus": "Former",
+          "alcoholUse": "Occasional",
+          "allergies": ["ACE inhibitors (cough)"],
+          "currentMeds": ["Losartan", "Calcium supplement"]
+        },
+        "diagnosis": {
+          "workingDiagnosis": "No hepatic tumour; fatty infiltration possible",
+          "differential": ["NAFLD", "Transient hepatitis (unlikely)"],
+          "tumourBurden": "None"
+        },
+        "medicalHistory": {
+          "pastMedicalHistory": ["Hypertension", "Osteoarthritis"],
+          "pastSurgicalHistory": ["Cataract surgery"],
+          "familyHistory": ["Heart disease (father)"],
+          "socialHistory": "Retired; walks daily"
+        },
+        "imaging": {
+          "ctSummary": "No focal lesions; mild steatosis suggested",
+          "mriSummary": "No suspicious masses; benign cysts present",
+          "radiologyImpression": "No tumour identified"
+        },
+        "treatmentPlan": {
+          "recommendation": "Reassurance; manage metabolic risk",
+          "plannedProcedures": [],
+          "notes": "Repeat imaging only if symptoms change"
+        },
+        "followUp": {
+          "nextVisit": "2026-07-10",
+          "pending": ["Routine follow-up"]
+        }
+      }
+    }
+
+  ]
+}

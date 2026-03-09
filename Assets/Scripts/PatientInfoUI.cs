@@ -1,50 +1,96 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PatientInfoUI : MonoBehaviour {
     [SerializeField] private TMP_Text infoText;
-    [SerializeField] private Transform contentParent;
+    [SerializeField] private Transform patientButtonsParent;
     [SerializeField] private GameObject patientRowPrefab;
+
+
     public static PatientInfoUI Instance;
+
+    private PatientTab currentTab = PatientTab.General;
 
 
     private void Awake() {
         Instance = this;
         PopulateList();
+        RefreshUI();
     }
 
-    public string DisplayPatient(int id) {
+    public string SelectPatient(int id) {
         PatientInfo p = PatientManager.GetPatient(id);
-        string text;
 
         if (p == null) {
-            text = $"No patient found with given id : {id}.";
+            PatientManager.currentPatient = null;
+            return $"No patient found with given id : {id}.";
         }
-        else {
-            text = p.getPatientInfo();
-            PatientModelManager.Instance.ShowPatient(id);
+        
+        PatientModelManager.Instance.ShowPatient(id);
+
+        PatientManager.currentPatient = p;
+        currentTab = PatientTab.General;
+        RefreshUI();
+        
+        return p.GetBasicPatientInfo();
+    }
+
+    private void RefreshUI() {
+        if (PatientManager.currentPatient == null) {
+            infoText.text = "No patient selected.";
+            return;
         }
 
-        infoText.text = text ;
-        return text;
+        infoText.text = PatientManager.currentPatient.GetTabInfo(currentTab);
+    }
+
+    public void SelectTab(PatientTab tab) {
+        if (PatientManager.currentPatient == null)
+            return;
+
+        currentTab = tab;
+        RefreshUI();
     }
 
     // add patients into scrollable list in UI
     public void PopulateList() {
-        foreach (Transform child in contentParent)
+        foreach (Transform child in patientButtonsParent)
             Destroy(child.gameObject);
 
         foreach (var patient in PatientManager.getPatients()) {
-            GameObject row = Instantiate(patientRowPrefab, contentParent);
+            GameObject row = Instantiate(patientRowPrefab, patientButtonsParent);
 
             row.GetComponentInChildren<TMP_Text>().text = patient.id.ToString();
 
             row.GetComponent<Button>().onClick.AddListener(() => {
-                DisplayPatient(patient.id);
+                SelectPatient(patient.id);
             });
         }
+    }
+
+    public void SelectGeneral() {
+        SelectTab(PatientTab.General);
+    }
+
+    public void SelectDiagnosis() {
+        SelectTab(PatientTab.Diagnosis);
+    }
+
+    public void SelectMedicalHistory() {
+        SelectTab(PatientTab.MedicalHistory);
+    }
+
+    public void SelectImaging() {
+        SelectTab(PatientTab.Imaging);
+    }
+
+    public void SelectTreatmentPlan() {
+        SelectTab(PatientTab.TreatmentPlan);
+    }
+
+    public void SelectFollowUp() {
+        SelectTab(PatientTab.FollowUp);
     }
 
 

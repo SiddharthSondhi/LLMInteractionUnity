@@ -9,3 +9,4 @@
 - improve/update prompt given to the AI
 - log time, accuracy, and num interactions for tasks
 - loading sign when AI is processing
+- Add ability to reset Sim.

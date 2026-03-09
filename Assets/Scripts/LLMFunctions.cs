@@ -56,7 +56,7 @@ public static class LLMFunctions {
     }
 
     public static string LoadPatientInfo(int id) {
-        string response = PatientInfoUI.Instance.DisplayPatient(id);
+        string response = PatientInfoUI.Instance.SelectPatient(id);
 
         return response;
     }
