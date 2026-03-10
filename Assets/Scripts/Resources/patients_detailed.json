@@ -440,7 +440,7 @@
       "sex": "M",
       "yearOfBirth": 1966,
       "liverDensity": 108,
-      "pathologies": "0 tumour in liver",
+      "pathologies": "1 tumour in liver",
       "tabs": {
         "general": {
           "displayName": "Patient 11",
@@ -569,7 +569,7 @@
       "sex": "F",
       "yearOfBirth": 1970,
       "liverDensity": 109,
-      "pathologies": "0 tumour in liver",
+      "pathologies": "2 tumour in liver",
       "tabs": {
         "general": {
           "displayName": "Patient 14",
@@ -741,7 +741,7 @@
       "sex": "F",
       "yearOfBirth": 1958,
       "liverDensity": 49,
-      "pathologies": "0 tumour in IV/V",
+      "pathologies": "1 tumour in IV/V",
       "tabs": {
         "general": {
           "displayName": "Patient 18",
@@ -827,7 +827,7 @@
       "sex": "F",
       "yearOfBirth": 1949,
       "liverDensity": 59,
-      "pathologies": "0 tumour in liver",
+      "pathologies": "1 tumour in liver",
       "tabs": {
         "general": {
           "displayName": "Patient 20",

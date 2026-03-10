@@ -1,20 +1,153 @@
 {
    "qTitle":"",
-   "qInstructions":"Please complete the following tasks. Once the task is completed. Press next to move on to the next task. You can press next when you are ready.",
+   "qInstructions":"Please complete the following tasks and answer the related questions. Once the task is completed. Press next to move on to the next task. You can press next to begin when you are ready.",
    "qId":"tasksQE",
    "questions":[
       {
          "pId":"page1",
          "qType":"radio",
-         "qInstructions":"",
+         "qInstructions":"Task 1",
          "qData":[
             {
                "qId":"q1",
-               "qText":"Task 1: Understand the 3D orientation of the liver and identify the Inferior Vena Cava (IVC):",
+               "qText":"Find the liver model showing the anatomy of the liver, understand the 3D orientation of the liver, and identify the Inferior Vena Cava by highlighting it.",
                "qMandatory":"true",
                "qOptions":[
                   "",
 				  "Task Complete",
+                  ""
+               ]
+            },
+            {
+               "qId":"q2",
+               "qText":"When viewing the back side of the liver, which structure runs along the back surface of the liver?",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Portal Vein",
+                  "Hepatic Artery",
+                  "Inferior Vena Cava",
+                  "Comoon Bile Duct",
+                  ""
+               ]
+            }
+         ]
+      },
+      {
+         "pId":"page2",
+         "qType":"radio",
+         "qInstructions":"Task 2",
+         "qData":[
+            {
+               "qId":"q3",
+               "qText":"Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the gallbladder.",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Task Complete",
+                  ""
+               ]
+            },
+            {
+               "qId":"q4",
+               "qText":"Where is the gallbladder located relative to the liver?",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "On the top surface",
+                  "On the underside of the liver",
+                  "Inside the liver tissue",
+                  "On the front surface",
+                  ""
+               ]
+            }
+         ]
+      },
+      {
+         "pId":"page3",
+         "qType":"radio",
+         "qInstructions":"Task 3",
+         "qData":[
+            {
+               "qId":"q5",
+               "qText":"Find the liver model showing the segmentations of the liver, and highlight the 4th segment of the liver.",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Task Complete",
+                  ""
+               ]
+            },
+            {
+               "qId":"q6",
+               "qText":"How many segments does the liver contain?",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "2",
+                  "16",
+                  "8",
+                  "7",
+                  ""
+               ]
+            }
+         ]
+      },
+      {
+         "pId":"page4",
+         "qType":"radio",
+         "qInstructions":"Task 4",
+         "qData":[
+            {
+               "qId":"q7",
+               "qText":"You are preparing to review the anatomy of patient 6, but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Solitary liver lesion suspicious for malignancy",
+                  "Benign hepatic hemangioma with no evidence of malignancy",
+                  "Diffuse fatty liver disease consistent with hepatic steatosis",
+                  "Chronic liver cirrhosis associated with long-term alcohol use",
+                  ""
+               ]
+            }
+         ]
+      },
+      {
+         "pId":"page5",
+         "qType":"radio",
+         "qInstructions":"Task 5",
+         "qData":[
+            {
+               "qId":"q8",
+               "qText":"You are reviewing saftey protocols. Identify if patient 18 has any allergies and if so to what.",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Penicillin",
+                  "Latex",
+                  "Iodine Contrast Dye",
+                  "No known allergies (NKDA)",
+                  ""
+               ]
+            }
+         ]
+      },
+      {
+         "pId":"page6",
+         "qType":"radio",
+         "qInstructions":"Task 6",
+         "qData":[
+            {
+               "qId":"q9",
+               "qText":"You are searching through a medical database. Search through the patient liver models and find a patient that has no tumors at all. Find what medications this patient is on.",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Omeprazole",
+                  "Apixaban and Metoprolol",
+                  "Furosemide",
+                  "Levothyroxine and Vitamin D",
                   ""
                ]
             }

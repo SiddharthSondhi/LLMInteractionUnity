@@ -60,7 +60,7 @@ namespace VRQuestionnaireToolkit
         {
             _path = Application.dataPath + "/Resources/saved_transform_values";
 
-            if (ConfigurationMode & File.Exists(_path))
+            if (File.Exists(_path))
                 SetTransformToSavedValues();
             else
                 SetTransformToDefault();

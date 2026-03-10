@@ -1,3 +1,11 @@
 QuestionType,Question,QuestionID,Answer
-radio,Task 1: Understand the 3D orientation of the liver and identify the Inferior Vena Cava (IVC):,q1,1
+radio,Find the liver model showing the anatomy of the liver, understand the 3D orientation of the liver, and identify the Inferior Vena Cava by highlighting it.,q1,1
+radio,When viewing the back side of the liver, which structure runs along the back surface of the liver?,q2,3
+radio,Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the gallbladder.,q3,1
+radio,Where is the gallbladder located relative to the liver?,q4,3
+radio,Find the liver model showing the segmentations of the liver, and highlight the 4th segment of the liver.,q5,1
+radio,How many segments does the liver contain?,q6,2
+radio,You are preparing to review the anatomy of patient 6, but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.,q7,2
+radio,You are reviewing saftey protocols. Identify if patient 18 has any allergies and if so to what.,q8,3
+radio,You are searching through a medical database. Search through the patient liver models and find a patient that has no tumors at all. Find what medications this patient is on.,q9,4
 
