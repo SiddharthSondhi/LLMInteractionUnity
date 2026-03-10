@@ -1,0 +1,26 @@
+{
+   "qTitle":"",
+   "qInstructions":"Please complete the following tasks. Once the task is completed. Press next to move on to the next task. You can press next when you are ready.",
+   "qId":"tasksQE",
+   "questions":[
+      {
+         "pId":"page1",
+         "qType":"radio",
+         "qInstructions":"",
+         "qData":[
+            {
+               "qId":"q1",
+               "qText":"Task 1: Understand the 3D orientation of the liver and identify the Inferior Vena Cava (IVC):",
+               "qMandatory":"true",
+               "qOptions":[
+                  "",
+				  "Task Complete",
+                  ""
+               ]
+            }
+         ]
+      }
+   ],
+   "qMessage":"You have completed all tasks!",
+   "qAcknowledgments":"Thank you very much for taking part in the experiment! We appreciate your time!"
+}

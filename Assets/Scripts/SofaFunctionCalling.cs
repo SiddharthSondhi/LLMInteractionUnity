@@ -138,7 +138,8 @@ public class SofaFunctionCalling : MonoBehaviour {
         string choices = string.Join(", ", GetFunctionNames());
         return "You are an AI assistant. You are part of a simulation that contains simulations of a liver models." +
                 "The simulation/liver models can be controlled with several functions." +
-                "You also have access to patient information." +
+                "You also have access to patient information for all patients." +
+                "Once a patient is selected you have access to more detailed information such as alergies, etc. about that patient." +
                 "Pick the best function out of these choices based on the user input. " +
                 "PICK 'None' IF NO OPTION FITS OR IF YOU DON'T HAVE ENOUGH INFORMATION FOR THE ARGUMENTS OF THE FUNCTION. \n" +
                 "In addition to that, write a natural language reply for the user.\n" +
