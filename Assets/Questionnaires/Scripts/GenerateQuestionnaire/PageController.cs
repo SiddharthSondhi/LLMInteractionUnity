@@ -175,10 +175,14 @@ namespace VRQuestionnaireToolkit
                     nextButton.text = "Submit";
                 }
 
+                // record timings for each quesiton
+                QuestionTimingManager.Instance.StartTimerAndRecordTime();
+
                 if (_pageFactory.PageList.Count - 1 == _pageFactory.CurrentPage)
                 {
                     _export.GetComponent<ExportToCSV>().Save();
                 }
+
             }
             else
             {

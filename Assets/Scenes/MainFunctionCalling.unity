@@ -13526,8 +13526,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 300, y: 30}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 300, y: 20}
+  m_SizeDelta: {x: 250, y: 70}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &646482994
 MonoBehaviour:
@@ -19132,6 +19132,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259616, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
+      propertyPath: Condition
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697000387260259616, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
+      propertyPath: ParticipantId
+      value: id2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697000387260259616, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: ConfigurationMode
       value: 0
       objectReference: {fileID: 0}
@@ -19241,11 +19249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259645, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: JsonInputPath_1
-      value: Assets/Scripts/Resources/tasks.json
+      value: Assets/Scripts/Resources/tasks_UI.json
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259645, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: JsonInputPath_2
-      value: Assets/Questionnaires/Data/Questions/questionnaire_example
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259645, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: JsonInputPath_3
@@ -19851,7 +19859,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 142586481}
   m_HandleRect: {fileID: 142586480}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -20949,6 +20957,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e428133ada71bc04b9c8294253225326, type: 3}
   m_PrefabInstance: {fileID: 909571845}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &911869382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911869383}
+  - component: {fileID: 911869384}
+  m_Layer: 0
+  m_Name: QuestionTimingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911869383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911869382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749666987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911869384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911869382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4530127f2261f5941ab7eb843422cc71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRQuestionnaireToolkit.QuestionTimingManager
+  questionTimes: []
 --- !u!1001 &912636926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27497,7 +27550,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.11183457, y: -0.698207, z: -0.11183457, w: 0.698207}
   m_LocalPosition: {x: 0.156, y: 0.763, z: 0.467}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1401209026}
@@ -42014,6 +42067,7 @@ Transform:
   - {fileID: 1390983300}
   - {fileID: 429635258}
   - {fileID: 1230791720}
+  - {fileID: 911869383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749769509

@@ -1,6 +1,5 @@
 using LLMUnity;
 using SofaUnity;
-using System;
 using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
@@ -26,8 +25,11 @@ public class Args {
     // highlight segment
     public int segment;
 
-    //highlight liver part;
+    //highlight liver part
     public string partName;
+
+    //set liver transparency
+    public string transparencyLevel;
 }
 
 
@@ -126,6 +128,8 @@ public class SofaFunctionCalling : MonoBehaviour {
                 return LLMFunctions.HighlightSegment(result.args.segment);
             case "HighlightLiverPart":
                 return LLMFunctions.HighlightLiverPart(result.args.partName);
+            case "SetLiverTransparency":
+                return LLMFunctions.SetLiverTransparency(result.args.transparencyLevel);
             // for no arg functions
             default:
                 var f = getLLMFunction(result.choice);
@@ -217,6 +221,18 @@ public class SofaFunctionCalling : MonoBehaviour {
                     ""partName"": { ""type"": ""string"", ""enum"" : [""CommonHepaticPortal"", ""GallBladder"", ""HepaticPortalVein"", ""InferiorVenaCava"", ""LeftLobe"", ""RightLobe"", ""Ligaments""] }
                 },
                 ""required"": [""partName""],
+                ""additionalProperties"" : false
+                }"
+            },
+            {
+                "SetLiverTransparency",
+                @"
+                {
+                ""type"": ""object"",
+                ""properties"": {
+                    ""transparencyLevel"": { ""type"": ""string"", ""enum"" : [""clear"", ""transparent"", ""opaque""] }
+                },
+                ""required"": [""transparencyLevel""],
                 ""additionalProperties"" : false
                 }"
             }

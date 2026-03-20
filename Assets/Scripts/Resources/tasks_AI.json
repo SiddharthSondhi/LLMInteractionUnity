@@ -10,24 +10,14 @@
          "qData":[
             {
                "qId":"q1",
-               "qText":"Find the liver model showing the anatomy of the liver, understand the 3D orientation of the liver, and identify the Inferior Vena Cava by highlighting it.",
+               "qText":"Find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the Inferior Vena Cava by highlighting it. When viewing the back side of the liver which structure runs along the back surface of the liver?",
                "qMandatory":"true",
                "qOptions":[
                   "",
-				  "Task Complete",
-                  ""
-               ]
-            },
-            {
-               "qId":"q2",
-               "qText":"When viewing the back side of the liver, which structure runs along the back surface of the liver?",
-               "qMandatory":"true",
-               "qOptions":[
-                  "",
-				  "Portal Vein",
+				      "Portal Vein",
                   "Hepatic Artery",
                   "Inferior Vena Cava",
-                  "Comoon Bile Duct",
+                  "Comon Bile Duct",
                   ""
                ]
             }
@@ -39,22 +29,12 @@
          "qInstructions":"Task 2",
          "qData":[
             {
-               "qId":"q3",
-               "qText":"Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the gallbladder.",
+               "qId":"q2",
+               "qText":"Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the gallbladder.Where is the gallbladder located relative to the liver?",
                "qMandatory":"true",
                "qOptions":[
                   "",
-				  "Task Complete",
-                  ""
-               ]
-            },
-            {
-               "qId":"q4",
-               "qText":"Where is the gallbladder located relative to the liver?",
-               "qMandatory":"true",
-               "qOptions":[
-                  "",
-				  "On the top surface",
+				      "On the top surface",
                   "On the underside of the liver",
                   "Inside the liver tissue",
                   "On the front surface",
@@ -69,22 +49,12 @@
          "qInstructions":"Task 3",
          "qData":[
             {
-               "qId":"q5",
-               "qText":"Find the liver model showing the segmentations of the liver, and highlight the 4th segment of the liver.",
-               "qMandatory":"true",
-               "qOptions":[
-                  "",
-				  "Task Complete",
-                  ""
-               ]
-            },
-            {
                "qId":"q6",
-               "qText":"How many segments does the liver contain?",
+               "qText":"Find the liver model showing the segmentations of the liver and highlight the 4th segment of the liver. How many segments does the liver contain?",
                "qMandatory":"true",
                "qOptions":[
                   "",
-				  "2",
+				      "2",
                   "16",
                   "8",
                   "7",
@@ -99,12 +69,12 @@
          "qInstructions":"Task 4",
          "qData":[
             {
-               "qId":"q7",
-               "qText":"You are preparing to review the anatomy of patient 6, but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.",
+               "qId":"q4",
+               "qText":"You are preparing to review the anatomy of patient 6 but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.",
                "qMandatory":"true",
                "qOptions":[
                   "",
-				  "Solitary liver lesion suspicious for malignancy",
+				      "Solitary liver lesion suspicious for malignancy",
                   "Benign hepatic hemangioma with no evidence of malignancy",
                   "Diffuse fatty liver disease consistent with hepatic steatosis",
                   "Chronic liver cirrhosis associated with long-term alcohol use",
@@ -119,12 +89,12 @@
          "qInstructions":"Task 5",
          "qData":[
             {
-               "qId":"q8",
+               "qId":"q5",
                "qText":"You are reviewing saftey protocols. Identify if patient 18 has any allergies and if so to what.",
                "qMandatory":"true",
                "qOptions":[
                   "",
-				  "Penicillin",
+				      "Penicillin",
                   "Latex",
                   "Iodine Contrast Dye",
                   "No known allergies (NKDA)",
@@ -139,12 +109,12 @@
          "qInstructions":"Task 6",
          "qData":[
             {
-               "qId":"q9",
+               "qId":"q6",
                "qText":"You are searching through a medical database. Search through the patient liver models and find a patient that has no tumors at all. Find what medications this patient is on.",
                "qMandatory":"true",
                "qOptions":[
                   "",
-				  "Omeprazole",
+				      "Omeprazole",
                   "Apixaban and Metoprolol",
                   "Furosemide",
                   "Levothyroxine and Vitamin D",

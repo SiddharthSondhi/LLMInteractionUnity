@@ -33,6 +33,11 @@ public static class LLMFunctions {
                         Vena Cava, Left Lobe, Right Lobe, and Ligaments.
           arguments - partName : string with options 'CommonHepaticPortal', 'GallBladder', 'HepaticPortalVein', 'InferiorVenaCava', 
                       'LeftLobe', 'RightLobe', 'Ligaments 
+        
+        - SetLiverTransparency
+          description - Sets the transparency level of the outer parts of the liver allowing for anatomy inside to be more visible. Transperency 
+                        levels are: clear (fully transparent surface), transparent (partially visible surface), and Opauqe (fully opaque surface)
+          arguments - transparencyLevel : string with options 'clear', 'transparent', 'opaque' 
         ";
 
     public static string TranslateLiver(float x, float y, float z) {
@@ -88,5 +93,24 @@ public static class LLMFunctions {
 
         LiverAnatomyHighlighter.Instance.ClearHighlight();
         return $"No part with name {partName} found!";
+    }
+
+    public static string SetLiverTransparency(string transparencyLevel) {
+        
+        switch (transparencyLevel) {
+            case "clear": 
+                LiverAnatomyHighlighter.Instance.SetClear();
+                break;
+            case "transparent":
+                LiverAnatomyHighlighter.Instance.SetTransparent();
+                break;
+            case "opaque":
+                LiverAnatomyHighlighter.Instance.SetOpaque();
+                break;
+            default:
+                return "Incorrect argument provided. Transparency not changed";
+        }
+
+        return $"Transparency set to {transparencyLevel}";
     }
 }

@@ -51,7 +51,7 @@ namespace VRQuestionnaireToolkit
         private string _folderPath;
         private string _fileType;
         private string _questionnaireID;
-        private string[] csvTitleRow = new string[4];
+        private string[] csvTitleRow = new string[5];
 
         public UnityEvent QuestionnaireFinishedEvent;
 
@@ -116,14 +116,19 @@ namespace VRQuestionnaireToolkit
             _pageFactory = GameObject.FindGameObjectWithTag("QuestionnaireFactory");
             _csvRows = new List<string[]>();
 
+            int timeIndex = 0;
+            List<float> recordedTimes = QuestionTimingManager.Instance.questionTimes;
+
+
             // create title rows
             csvTitleRow[0] = "QuestionType";
             csvTitleRow[1] = "Question";
             csvTitleRow[2] = "QuestionID";
             csvTitleRow[3] = "Answer";
+            csvTitleRow[4] = "TimeSeconds";
             _csvRows.Add(csvTitleRow);
 
-            string[] csvTemp = new string[4];
+            string[] csvTemp = new string[5];
 
             // enable all GameObjects (except the first and last page) in order to read the responses
             for (int i = 1; i < _pageFactory.GetComponent<PageFactory>().NumPages - 1; i++)
@@ -135,7 +140,7 @@ namespace VRQuestionnaireToolkit
             {
                 if (_pageFactory.GetComponent<PageFactory>().QuestionList[i] != null)
                 {
-                    csvTemp = new string[4];
+                    csvTemp = new string[5];
 
                     if (_pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>() != null)
                     {
@@ -161,6 +166,15 @@ namespace VRQuestionnaireToolkit
                                 }
                             }
                         }
+
+                        if (timeIndex < recordedTimes.Count) {
+                            csvTemp[4] = recordedTimes[timeIndex].ToString("F2");
+                            timeIndex++;
+                        }
+                        else {
+                            csvTemp[4] = "";
+                        }
+
                         _csvRows.Add(csvTemp);
                     }
                     else if (_pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<LinearGrid>() != null)

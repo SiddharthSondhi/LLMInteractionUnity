@@ -89,7 +89,6 @@ public class LiverAnatomyHighlighter : MonoBehaviour {
         if (currentHighlightedIndex != 5) {
             parts[5].sharedMaterial = mat;
         }
-
     }
 
     public void SetClear() {
