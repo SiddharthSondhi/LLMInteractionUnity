@@ -48825,6 +48825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066641533}
   - component: {fileID: 2066641532}
+  - component: {fileID: 2066641534}
   m_Layer: 0
   m_Name: Voice Input
   m_TagString: Untagged
@@ -48839,7 +48840,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066641531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8d1a13ddc287e2428bba4212e297c88, type: 3}
   m_Name: 
@@ -48863,6 +48864,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1749666987}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066641534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066641531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a99694d6c25fe41aa7320b4115bdf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WhisperVoiceInput
+  whisper: {fileID: 0}
+  microphoneRecord: {fileID: 0}
+  userText: {fileID: 0}
 --- !u!4 &2067310403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5888765399538998960, guid: ad818c36731146e994540a1896ad8f24, type: 3}

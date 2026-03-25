@@ -1,6 +1,4 @@
-using LLMUnitySamples;
 using System.Collections.Generic;
-using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
