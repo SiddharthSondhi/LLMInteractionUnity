@@ -1,8 +1,0 @@
-QuestionType,Question,QuestionID,Answer,TimeSeconds
-radio,Find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the left lobe and right lobes by highlighting them. When viewing the liver which lobe is larger?,q1,2,9.23
-radio,Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the hepatic portal vein. Where is the gallbladder located relative to the liver?,q2,3,3.68
-radio,Find the liver model showing the segmentations of the liver and highlight the 7th segment of the liver. Which lobe is the 7th segment located in?,q6,2,21.73
-radio,You are preparing to review the anatomy of patient 12 but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.,q4,4,34.98
-radio,You are reviewing saftey protocols. Identify if patient 1 has any allergies and if so to what.,q5,1,3.65
-radio,You are searching through a medical database. Search through the patient liver models and find a patient that has more than 30 tumors. Find what medications this patient is on.,q6,4,8.41
-

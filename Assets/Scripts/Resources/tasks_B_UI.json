@@ -1,6 +1,6 @@
 {
    "qTitle":"",
-   "qInstructions":"Please complete the following tasks and answer the related questions. Once the task is completed. Press next to move on to the next task. You can press next to begin when you are ready.",
+   "qInstructions":"Please complete the following tasks and answer the related questions. For these tasks, use the UI controls located at each station. Once the task is completed. Press next to move on to the next task. You can press next to begin when you are ready.",
    "qId":"tasksQE",
    "questions":[
       {
@@ -10,7 +10,7 @@
          "qData":[
             {
                "qId":"q1",
-               "qText":"Find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the left lobe and right lobes by highlighting them. When viewing the liver which lobe is larger?",
+               "qText":"At station 1, find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the left lobe and right lobes by highlighting them. When viewing the liver which lobe is larger?",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -29,7 +29,7 @@
          "qData":[
             {
                "qId":"q2",
-               "qText":"Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the hepatic portal vein. Where is the gallbladder located relative to the liver?",
+               "qText":"At station 2, find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the hepatic portal vein. Where is the hepatic portal vein located relative to the liver?",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -48,8 +48,8 @@
          "qInstructions":"Task 3",
          "qData":[
             {
-               "qId":"q6",
-               "qText":"Find the liver model showing the segmentations of the liver and highlight the 7th segment of the liver. Which lobe is the 7th segment located in?",
+               "qId":"q3",
+               "qText":"At station 2, find the liver model showing the segmentations of the liver and highlight the 7th segment of the liver. Which lobe is the 7th segment located in?",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -68,7 +68,7 @@
          "qData":[
             {
                "qId":"q4",
-               "qText":"You are preparing to review the anatomy of patient 12 but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.",
+               "qText":"You are preparing to review the anatomy of patient 12 but first you need to confirm the primary reason for admission. At station 2, access the patients's general info and identify the working diagnosis.",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -88,7 +88,7 @@
          "qData":[
             {
                "qId":"q5",
-               "qText":"You are reviewing saftey protocols. Identify if patient 1 has any allergies and if so to what.",
+               "qText":"You are reviewing saftey protocols. At station 2, identify if patient 1 has any allergies, and if so to what.",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -108,7 +108,7 @@
          "qData":[
             {
                "qId":"q6",
-               "qText":"You are searching through a medical database. Search through the patient liver models and find a patient that has more than 30 tumors. Find what medications this patient is on.",
+               "qText":"Using station 2 and station 3, search through the patient liver models and find a patient that has more than 30 tumors. Find what medications this patient is on.",
                "qMandatory":"true",
                "qOptions":[
                   "",

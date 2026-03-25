@@ -1,6 +1,6 @@
 {
    "qTitle":"",
-   "qInstructions":"Please complete the following tasks and answer the related questions. Once the task is completed. Press next to move on to the next task. You can press next to begin when you are ready.",
+   "qInstructions":"Please complete the following tasks and answer the related questions. For these tasks, use the AI assistant. The AI assistant can help you by answering your questions and performing tasks such as highlighting a part of the liver, loading in a patient model, etc. Once the task is completed. Press next to move on to the next task. You can press next to begin when you are ready.",
    "qId":"tasksQE",
    "questions":[
       {
@@ -10,7 +10,7 @@
          "qData":[
             {
                "qId":"q1",
-               "qText":"Find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the Inferior Vena Cava by highlighting it. When viewing the back side of the liver which structure runs along the back surface of the liver?",
+               "qText":"At station 1, find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the Inferior Vena Cava by highlighting it. When viewing the back side of the liver which structure runs along the back surface of the liver?",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -30,7 +30,7 @@
          "qData":[
             {
                "qId":"q2",
-               "qText":"Find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the gallbladder.Where is the gallbladder located relative to the liver?",
+               "qText":"At station 1, find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the gallbladder. Where is the gallbladder located relative to the liver?",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -50,7 +50,7 @@
          "qData":[
             {
                "qId":"q6",
-               "qText":"Find the liver model showing the segmentations of the liver and highlight the 4th segment of the liver. How many segments does the liver contain?",
+               "qText":"At station 1, find the liver model showing the segmentations of the liver and highlight the 4th segment of the liver. How many segments does the liver contain?",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -70,12 +70,12 @@
          "qData":[
             {
                "qId":"q4",
-               "qText":"You are preparing to review the anatomy of patient 6 but first you need to confirm the primary reason for admission. Access the patients's general info and identify the working diagnosis.",
+               "qText":"You are preparing to review the anatomy of patient 6 but first you need to confirm the primary reason for admission. At station 2, access the patients's general info and identify the working diagnosis.",
                "qMandatory":"true",
                "qOptions":[
                   "",
 				      "Solitary liver lesion suspicious for malignancy",
-                  "Benign hepatic hemangioma with no evidence of malignancy",
+                  "Extensive multifocal hepatic malignancy",
                   "Diffuse fatty liver disease consistent with hepatic steatosis",
                   "Chronic liver cirrhosis associated with long-term alcohol use",
                   ""
@@ -90,7 +90,7 @@
          "qData":[
             {
                "qId":"q5",
-               "qText":"You are reviewing saftey protocols. Identify if patient 18 has any allergies and if so to what.",
+               "qText":"You are reviewing saftey protocols. At station 2, identify if patient 18 has any allergies and if so to what.",
                "qMandatory":"true",
                "qOptions":[
                   "",
@@ -110,7 +110,7 @@
          "qData":[
             {
                "qId":"q6",
-               "qText":"You are searching through a medical database. Search through the patient liver models and find a patient that has no tumors at all. Find what medications this patient is on.",
+               "qText":"Use station 2 and station 3 to search through the patient liver models and find a patient that has no tumors at all. Find what medications this patient is on.",
                "qMandatory":"true",
                "qOptions":[
                   "",
