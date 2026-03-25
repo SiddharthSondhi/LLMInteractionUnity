@@ -42710,7 +42710,6 @@ Transform:
   - {fileID: 2066641533}
   - {fileID: 986969540}
   - {fileID: 1180095356}
-  - {fileID: 1980682765}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749769509
@@ -47319,12 +47318,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980682764}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.95, y: 0.56749, z: -2.69072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1749666987}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1980682766
 MonoBehaviour:
@@ -47338,10 +47337,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610e3df24f28dca4d958d49525b0fc56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIToggleGroups
-  enableAI: 0
-  enableUI: 0
-  groupAObjects: []
-  groupBObjects: []
+  enableAI: 1
+  enableUI: 1
+  groupAIObjects:
+  - {fileID: 1199522301}
+  groupUIObjects:
+  - {fileID: 1655288380}
+  - {fileID: 1534432433}
+  - {fileID: 1427042093}
 --- !u!1001 &1983754693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52137,4 +52140,5 @@ SceneRoots:
   - {fileID: 748565064}
   - {fileID: 1749666987}
   - {fileID: 1368959832}
+  - {fileID: 1980682765}
   - {fileID: 850678943}
