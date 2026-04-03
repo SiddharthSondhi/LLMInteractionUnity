@@ -26,15 +26,11 @@ public class WhisperVoiceInput : MonoBehaviour {
 
     void Update() {
         if (!leftController.isValid) {
-            // Get the left controller 
-            var devices = new List<InputDevice>();
-            InputDevices.GetDevicesAtXRNode(XRNode.LeftHand, devices);
-            if (devices.Count > 0)
-                leftController = devices[0];
-            return;
+            leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+            if (!leftController.isValid)
+                return;
         }
 
-        // X button = CommonUsages.primaryButton
         leftController.TryGetFeatureValue(CommonUsages.primaryButton, out bool xPressed);
 
         if (xPressed && !isListening)
@@ -54,7 +50,7 @@ public class WhisperVoiceInput : MonoBehaviour {
 
         MicIndicator.enabled = true;
 
-        //Debug.Log("Started recording");
+        Debug.Log("Started recording");
     }
 
     private void StopListening() {
@@ -66,7 +62,7 @@ public class WhisperVoiceInput : MonoBehaviour {
 
         MicIndicator.enabled = false;
 
-        //Debug.Log("Stopped recording");
+        Debug.Log("Stopped recording");
     }
 
     private async void OnRecordStop(AudioChunk recordedAudio) {
