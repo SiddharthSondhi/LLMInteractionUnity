@@ -9,11 +9,9 @@ namespace VRQuestionnaireToolkit {
         private bool first = true;
 
         public List<float> questionTimes = new List<float>();
-        private PageController pageController;
 
         private void Awake() {
             Instance = this;
-            pageController = FindFirstObjectByType<PageController>();
         }
 
         public void StartTimerAndRecordTime() {

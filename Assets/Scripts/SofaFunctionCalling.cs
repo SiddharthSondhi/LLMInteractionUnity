@@ -139,6 +139,8 @@ public class SofaFunctionCalling : MonoBehaviour {
 
     // construct prompt to give to LLM based on list of functions as well as user input
     private string ConstructPrompt(string message) {
+        InteractionsManager.Instance.TimesPrompted++;
+
         string choices = string.Join(", ", GetFunctionNames());
         return "You are an AI assistant. You are part of a simulation that contains simulations of a liver models." +
                 "The simulation/liver models can be controlled with several functions." +

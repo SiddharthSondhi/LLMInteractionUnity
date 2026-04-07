@@ -175,8 +175,11 @@ namespace VRQuestionnaireToolkit
                     nextButton.text = "Submit";
                 }
 
-                // record timings for each quesiton
+                // record timings and #interactions for each quesiton 
                 QuestionTimingManager.Instance.StartTimerAndRecordTime();
+                InteractionsManager.Instance.SaveAndResetInteractions();
+
+
 
                 if (_pageFactory.PageList.Count - 1 == _pageFactory.CurrentPage)
                 {

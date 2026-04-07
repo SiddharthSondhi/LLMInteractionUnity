@@ -51,7 +51,7 @@ namespace VRQuestionnaireToolkit
         private string _folderPath;
         private string _fileType;
         private string _questionnaireID;
-        private string[] csvTitleRow = new string[5];
+        private string[] csvTitleRow = new string[7];
 
         public UnityEvent QuestionnaireFinishedEvent;
 
@@ -116,7 +116,9 @@ namespace VRQuestionnaireToolkit
             _pageFactory = GameObject.FindGameObjectWithTag("QuestionnaireFactory");
             _csvRows = new List<string[]>();
 
-            int timeIndex = 0;
+            int timeInd = 0;
+            int AIInteractionsInd = 0;
+            int UIInteractionsInd = 0;
             List<float> recordedTimes = QuestionTimingManager.Instance.questionTimes;
 
 
@@ -126,9 +128,11 @@ namespace VRQuestionnaireToolkit
             csvTitleRow[2] = "QuestionID";
             csvTitleRow[3] = "Answer";
             csvTitleRow[4] = "TimeSeconds";
+            csvTitleRow[5] = "TimesPromptedAI";
+            csvTitleRow[6] = "TimesInteractedWithUI";
             _csvRows.Add(csvTitleRow);
 
-            string[] csvTemp = new string[5];
+            string[] csvTemp = new string[7];
 
             // enable all GameObjects (except the first and last page) in order to read the responses
             for (int i = 1; i < _pageFactory.GetComponent<PageFactory>().NumPages - 1; i++)
@@ -140,10 +144,9 @@ namespace VRQuestionnaireToolkit
             {
                 if (_pageFactory.GetComponent<PageFactory>().QuestionList[i] != null)
                 {
-                    csvTemp = new string[5];
+                    csvTemp = new string[7];
 
-                    if (_pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>() != null)
-                    {
+                    if (_pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>() != null) {
                         _questionnaireID = _pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>().QuestionnaireId;
                         csvTemp[0] = _pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>().QType;
                         csvTemp[1] = _pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>().QText;
@@ -152,28 +155,42 @@ namespace VRQuestionnaireToolkit
                         for (int j = 0;
                             j < _pageFactory.GetComponent<PageFactory>().QuestionList[i][0].GetComponentInParent<Radio>()
                                 .RadioList.Count;
-                            j++)
-                        {
-                            if (_pageFactory.GetComponent<PageFactory>().QuestionList[i][j].GetComponentInChildren<Toggle>().isOn)
-                            {
-                                if (_questionnaireID != "SSQ")
-                                {
+                            j++) {
+                            if (_pageFactory.GetComponent<PageFactory>().QuestionList[i][j].GetComponentInChildren<Toggle>().isOn) {
+                                if (_questionnaireID != "SSQ") {
                                     csvTemp[3] = "" + (j + 1);
                                 }
-                                else
-                                {
+                                else {
                                     csvTemp[3] = "" + j;
                                 }
                             }
                         }
 
-                        if (timeIndex < recordedTimes.Count) {
-                            csvTemp[4] = recordedTimes[timeIndex].ToString("F2");
-                            timeIndex++;
+                        // save recorded times, times prompted AI, Times interacted with UI for each question
+                        if (timeInd < recordedTimes.Count) {
+                            csvTemp[4] = recordedTimes[timeInd].ToString("F2");
+                            timeInd++;
                         }
                         else {
-                            csvTemp[4] = "";
+                            csvTemp[4] = "0.00";
                         }
+
+                        if (AIInteractionsInd < InteractionsManager.Instance.TimesPromptedList.Count) {
+                            csvTemp[5] = InteractionsManager.Instance.TimesPromptedList[AIInteractionsInd].ToString("F2");
+                            AIInteractionsInd++;
+                        }
+                        else {
+                            csvTemp[5] = "0.00";
+                        }
+
+                        if (UIInteractionsInd < InteractionsManager.Instance.TimesInteractedWithUIList.Count) {
+                            csvTemp[6] = InteractionsManager.Instance.TimesInteractedWithUIList[UIInteractionsInd].ToString("F2");
+                            UIInteractionsInd++;
+                        }
+                        else {
+                            csvTemp[6] = "0.00";
+                        }
+
 
                         _csvRows.Add(csvTemp);
                     }

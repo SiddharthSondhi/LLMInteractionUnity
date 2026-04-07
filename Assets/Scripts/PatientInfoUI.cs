@@ -66,6 +66,10 @@ public class PatientInfoUI : MonoBehaviour {
             row.GetComponent<Button>().onClick.AddListener(() => {
                 SelectPatient(patient.id);
             });
+
+            row.GetComponent<Button>().onClick.AddListener(() => {
+                InteractionsManager.Instance.IncrementTimesInteractedWithUI();
+            });
         }
     }
 
