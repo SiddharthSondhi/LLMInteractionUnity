@@ -133,11 +133,25 @@ namespace VRQuestionnaireToolkit
             ReadJson(inputPath);
         }
 
+        private void ShuffleQuestions(JSONNode questionsNode) {
+            JSONArray questions = questionsNode.AsArray;
+
+            for (int i = 0; i < questions.Count; i++) {
+                int randomIndex = Random.Range(i, questions.Count);
+
+                JSONNode temp = questions[i];
+                questions[i] = questions[randomIndex];
+                questions[randomIndex] = temp;
+            }
+        }
+
         void ReadJson(string jsonPath)
         {
             // reads and parses .json input file
             string JSONString = File.ReadAllText(jsonPath);
             var N = JSON.Parse(JSONString);
+
+            ShuffleQuestions(N["questions"]);
 
             //----------- Read metadata from .JSON file ----------//
             string title = N["qTitle"].Value;

@@ -1,5 +1,6 @@
 using LLMUnity;
 using SofaUnity;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
@@ -50,6 +51,19 @@ public class SofaFunctionCalling : MonoBehaviour {
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private SofaContext sofaContext;
 
+    private bool isLoading = false;
+
+    IEnumerator LoadingDots() {
+        string baseText = "Thinking";
+        int dots = 0;
+
+        while (isLoading) {
+            dots = (dots + 1) % 4;
+            aiText.text = baseText + new string('.', dots);
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
+
     void Start() {
         // find the DAG node named "Liver"
         foreach (var node in sofaContext.GetComponentsInChildren<SofaDAGNode>()) {
@@ -76,11 +90,18 @@ public class SofaFunctionCalling : MonoBehaviour {
             //disable user input
             userText.interactable = false;
 
+            // start loading animation
+            isLoading = true;
+            StartCoroutine(LoadingDots());
+
             string prompt = ConstructPrompt(message);
             Debug.Log("Sent prompt: \n" + prompt);   
 
             //wait for response from llmCharacter
             string jsonResponse = await llmCharacter.Chat(prompt);
+
+            // stop loading animation
+            isLoading = false;
 
             Debug.Log("JSON Response: \n" + jsonResponse);
 

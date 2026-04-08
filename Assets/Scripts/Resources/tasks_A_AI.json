@@ -49,7 +49,7 @@
          "qInstructions":"Task 3",
          "qData":[
             {
-               "qId":"q6",
+               "qId":"q3",
                "qText":"At station 1, find the liver model showing the segmentations of the liver and highlight the 4th segment of the liver. How many segments does the liver contain?",
                "qMandatory":"true",
                "qOptions":[
