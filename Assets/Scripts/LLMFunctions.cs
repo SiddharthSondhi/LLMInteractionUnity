@@ -9,17 +9,6 @@ public static class LLMFunctions {
     public static SofaDAGNode liverNode;
     public static string functionDescriptions =
         @"
-        - TranslateLiver
-          description - Translates the liver to the position x, y, z
-          arguments - x : float, y : float, z : float
-
-        - SetGravity
-          description - Sets the x, y, and z values for the force of gravity in the simulation 
-          arguments - x : float, y : float, z : float
-
-        - ResetSim
-          description - Resets the simulation to its original state.
-
         - LoadPatientInfo
           description - Loads and displays patient information based on given id. Additionally loads in a model of the patient's liver.
           arguments - id : id
@@ -40,25 +29,6 @@ public static class LLMFunctions {
           arguments - transparencyLevel : string with options 'clear', 'transparent', 'opaque' 
         ";
 
-    public static string TranslateLiver(float x, float y, float z) {
-        liverNode.Translation = new Vector3(x, y, z);
-        return $"Translated Liver to {x}, {y}, {z}";
-    }
-
-    public static string SetGravity(float gravX, float gravY, float gravZ) { 
-        sofaContext.Gravity = new Vector3 (gravX, gravY, gravZ);
-        return $"Set gravity to x: {gravX}, y: {gravY} z: {gravZ}";
-    }
-
-    public static string ResetSim() {
-        liverNode.Translation = Vector3.zero;
-        liverNode.Rotation = Vector3.zero;
-        liverNode.Scale = Vector3.one;
-
-        sofaContext.Gravity = new Vector3(0.0f, -9.8f, 0.0f);
-
-        return "Reset the simulation";
-    }
 
     public static string LoadPatientInfo(int id) {
         string response = PatientInfoUI.Instance.SelectPatient(id);

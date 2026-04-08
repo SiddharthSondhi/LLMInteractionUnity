@@ -10,16 +10,6 @@ using UnityEngine.UI;
 
 [System.Serializable]
 public class Args {
-    // translation
-    public float translateX;
-    public float translateY;
-    public float translateZ;
-
-    // set gravity
-    public float gravX;
-    public float gravY;
-    public float gravZ;
-
     // load patient
     public int id;
 
@@ -139,10 +129,6 @@ public class SofaFunctionCalling : MonoBehaviour {
     // call function based on LLM result
     private string CallFunction(LLMResult result) {
         switch (result.choice) {
-            case "TranslateLiver":
-                return LLMFunctions.TranslateLiver(result.args.translateX, result.args.translateY, result.args.translateZ);
-            case "SetGravity":
-                return LLMFunctions.SetGravity(result.args.gravX, result.args.gravY, result.args.gravZ);
             case "LoadPatientInfo":
                 return LLMFunctions.LoadPatientInfo(result.args.id);
             case "HighlightSegment":
@@ -183,34 +169,6 @@ public class SofaFunctionCalling : MonoBehaviour {
     private string CreateJSONSchema() {
         // dictionary containing schemas for functions with arguments
         Dictionary<string, string> functionsWithArgumentsSchemas = new Dictionary<string, string> {
-            {
-                "TranslateLiver",
-                @"
-                {
-                ""type"": ""object"",
-                ""properties"": {
-                    ""translateX"": { ""type"": ""number""},
-                    ""translateY"": { ""type"": ""number""},
-                    ""translateZ"": { ""type"": ""number""}
-                },
-                ""required"": [""translateX"", ""translateY"", ""translateZ""],
-                ""additionalProperties"" : false
-                }"
-            },
-            {
-                "SetGravity",
-                @"
-                {
-                ""type"": ""object"",
-                ""properties"": {
-                    ""gravX"": { ""type"": ""number""},
-                    ""gravY"": { ""type"": ""number""},
-                    ""gravZ"": { ""type"": ""number""}
-                },
-                ""required"": [""gravX"", ""gravY"", ""gravZ""],
-                ""additionalProperties"" : false
-                }"
-            },
             {
                 "LoadPatientInfo",
                 @"
@@ -335,5 +293,8 @@ public class SofaFunctionCalling : MonoBehaviour {
         return functionNames.ToArray();
     }
 
+    public void OnClearButtonPress() {
+        userText.text = string.Empty;
+    }
 }
 

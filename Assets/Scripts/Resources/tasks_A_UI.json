@@ -6,7 +6,7 @@
       {
          "pId":"page1",
          "qType":"radio",
-         "qInstructions":"Task 1",
+         "qInstructions":"Task",
          "qData":[
             {
                "qId":"q1",
@@ -26,7 +26,7 @@
       {
          "pId":"page2",
          "qType":"radio",
-         "qInstructions":"Task 2",
+         "qInstructions":"Task",
          "qData":[
             {
                "qId":"q2",
@@ -46,10 +46,10 @@
       {
          "pId":"page3",
          "qType":"radio",
-         "qInstructions":"Task 3",
+         "qInstructions":"Task",
          "qData":[
             {
-               "qId":"q6",
+               "qId":"q3",
                "qText":"At station 1, find the liver model showing the segmentations of the liver and highlight the 4th segment of the liver. How many segments does the liver contain?",
                "qMandatory":"true",
                "qOptions":[
@@ -66,7 +66,7 @@
       {
          "pId":"page4",
          "qType":"radio",
-         "qInstructions":"Task 4",
+         "qInstructions":"Task",
          "qData":[
             {
                "qId":"q4",
@@ -86,7 +86,7 @@
       {
          "pId":"page5",
          "qType":"radio",
-         "qInstructions":"Task 5",
+         "qInstructions":"Task",
          "qData":[
             {
                "qId":"q5",
@@ -106,7 +106,7 @@
       {
          "pId":"page6",
          "qType":"radio",
-         "qInstructions":"Task 6",
+         "qInstructions":"Task",
          "qData":[
             {
                "qId":"q6",
