@@ -19612,11 +19612,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259616, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: Condition
-      value: test
+      value: A_UI
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259616, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: ParticipantId
-      value: test
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259616, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: ConfigurationMode
@@ -19728,7 +19728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259645, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: JsonInputPath_1
-      value: Assets/Scripts/Resources/tasks_A_AI.json
+      value: Assets/Scripts/Resources/tasks_A_UI.json
       objectReference: {fileID: 0}
     - target: {fileID: 8697000387260259645, guid: 93494b0f3d397d74ba1458871f004384, type: 3}
       propertyPath: JsonInputPath_2
@@ -36434,7 +36434,7 @@ MonoBehaviour:
   debug: 0
   parallelPrompts: -1
   dontDestroyOnLoad: 1
-  contextSize: 4000
+  contextSize: 8000
   batchSize: 512
   model: gemma-3-12b-it-Q4_K_M.gguf
   chatTemplate: gemma

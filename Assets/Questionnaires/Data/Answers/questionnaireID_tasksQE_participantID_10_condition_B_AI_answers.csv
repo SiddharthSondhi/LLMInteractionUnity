@@ -1,0 +1,8 @@
+QuestionType;Question;QuestionID;Answer;TimeSeconds;TimesPromptedAI;TimesInteractedWithUI
+radio;At station 2, find the liver model showing the anatomy of the liver and make the surface transparent so you can see the structures inside. Then locate and highlight the hepatic portal vein. Where is the hepatic portal vein located relative to the liver?;q2;3;234.03;7.00;0.00
+radio;You are reviewing saftey protocols. At station 2, identify if patient 1 has any allergies, and if so to what.;q5;1;102.14;4.00;0.00
+radio;Using station 2 and station 3, search through the patient liver models and find a patient that has more than 30 tumors. Find what medications this patient is on.;q6;1;67.68;2.00;0.00
+radio;You are preparing to review the anatomy of patient 12 but first you need to confirm the primary reason for admission. At station 2, access the patients's general info and identify the working diagnosis.;q4;4;60.11;2.00;0.00
+radio;At station 1, find the liver model showing the anatomy of the liver. Understand the 3D orientation of the liver and identify the left lobe and right lobes by highlighting them. When viewing the liver which lobe is larger?;q1;2;97.74;3.00;0.00
+radio;At station 2, find the liver model showing the segmentations of the liver and highlight the 7th segment of the liver. Which lobe is the 7th segment located in?;q3;2;137.03;2.00;0.00
+
